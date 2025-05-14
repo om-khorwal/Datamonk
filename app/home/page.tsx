@@ -120,7 +120,7 @@ const Homepage = () => {
         </div>
           
         {/* Bottom Graph */}
-        <div className="flex justify-center items-end md:mt-1 md:m-0 mt-10">
+        <div className="flex justify-center items-end md:mt-1 md:m-0 ">
           <img
             src="https://i.postimg.cc/prx1S6jz/Group-5-1.png"
             alt="graph"
