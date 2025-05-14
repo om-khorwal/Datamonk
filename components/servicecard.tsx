@@ -7,24 +7,29 @@ type ServiceCardProps = {
   title: string;
   description: string;
   onClick: () => void;
+  className ? : string
 };
 
 
 
 const ServiceCard = ({ icon, title, description, onClick }:ServiceCardProps) => {
   return (
-    <div className="relative w-[25%] h-[90%] bg-white flex justify-center items-center flex-col rounded-2xl p-10 shadow-lg">
-      <div className="absolute -top-6 left-1/2 -translate-x-1/2">
-        <img className="w-20 h-20" src={icon} alt="icon" />
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="relative w-full h-[90%] bg-white flex justify-center items-center flex-col rounded-2xl p-10 shadow-lg">
+        <div className="absolute -top-6 left-1/2 -translate-x-1/2">
+          <img className="w-20 h-20" src={icon} alt="icon" />
+        </div>
+        <h2 className="text-center font-bold mt-10 text-xl">{title}</h2>
+        <p className="text-center text-sm my-5">{description}</p>
+        <Button
+          className="bg-orange-200 border-2 text-[1rem] px-3 w-fit py-1 font-bold rounded-xl text-black active:scale-90 duration-300 hover:bg-orange-500 hover:scale-105 hover:text-white"
+          label="Connect"
+          onClick={onClick}
+        />
       </div>
-      <h2 className="text-center font-bold mt-10 text-xl">{title}</h2>
-      <p className="text-center text-sm my-5">{description}</p>
-      <Button
-        className="bg-orange-200 border-2 text-[1rem] px-3 w-fit py-1 font-bold rounded-xl text-black active:scale-90 duration-300 hover:bg-orange-500 hover:scale-105 hover:text-white"
-        label="Connect"
-        onClick={onClick}
-      />
+      {/* Repeat the card structure for each item */}
     </div>
+
   );
 };
 
