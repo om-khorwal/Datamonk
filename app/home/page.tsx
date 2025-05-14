@@ -79,35 +79,39 @@ const Homepage = () => {
   const Router = useRouter();
 
   return (
-    <div className="  ">
-      <section className="w-full min-h-screen bg-white flex flex-col justify-between px-4 md:px-8">
+    <div className=" md:w-full w-full">
+      <section className="md:w-full md:h-screen bg-white flex flex-col justify-between px-4 md:px-8">
         <Headers />
 
         {/* Graph Line */}
-        <div className="mb-6 flex justify-center">
+        <div className="m-10 md:w-full md:h-fit h-20 flex justify-center ">
           <img
             src="https://i.postimg.cc/6qHLngzd/Group-4-1.png"
             alt="graph"
+<<<<<<< HEAD
             className="w-full  object-contain"
+=======
+            className="h-fit "
+>>>>>>> refs/remotes/origin/main
           />
         </div>
 
         {/* Title & Text */}
         <div className="flex flex-col items-center justify-center text-center px-2 md:px-0">
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight">
+          <h1 className="text-8xl  md:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight">
             Dive into <span className="text-orange-500">Data</span>
           </h1>
-          <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-700 max-w-2xl">
+          <p className="mt-4 text-xl  md:text-xl text-gray-700 max-w-2xl">
             Transform raw data into actionable insights with AI-driven analytics,
             automation, and real-time intelligence.
           </p>
         </div>
 
         {/* Buttons */}
-        <div className="mt-4 flex flex-wrap justify-center gap-6">
+        <div className="md:my-5 my-10 flex flex-wrap justify-center gap-6 md:w-full ">
           <Button
             label="Explore"
-            className="bg-orange-500 text-white px-6 py-2 rounded-md shadow hover:bg-orange-600 transition active:scale-90"
+            className="bg-orange-500 text-white px-2 py-0 md:px-6 md:py-2 rounded-md shadow hover:bg-orange-600 transition active:scale-90"
             onClick={() => {
               document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
             }}
@@ -115,7 +119,7 @@ const Homepage = () => {
           <Button
             onClick={() => Router.push('/contact')}
             label="Connect"
-            className="bg-white border-2 border-orange-500 text-orange-500 px-5 py-2 rounded-md shadow hover:bg-orange-500 hover:text-white transition active:scale-90"
+            className="bg-white border-2 border-orange-500 text-orange-500 px-2 py-0 md:px-6 md:py-2 rounded-md shadow hover:bg-orange-500 hover:text-white transition active:scale-90"
           />
         </div>
           
