@@ -75,7 +75,7 @@ const cardData = [
 ];
 
 const Homepage = () => {
-
+  
   const Router = useRouter();
 
   return (
@@ -88,7 +88,7 @@ const Homepage = () => {
           <img
             src="https://i.postimg.cc/6qHLngzd/Group-4-1.png"
             alt="graph"
-            className="w-full max-w-5xl object-contain"
+            className="w-full  object-contain"
           />
         </div>
 
