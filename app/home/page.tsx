@@ -84,20 +84,20 @@ const Homepage = () => {
         <Headers />
 
         {/* Graph Line */}
-        <div className="m-5 md:w-full md:flex hidden md:h-fit h-20  justify-center ">
+        <div className=" md:w-full md:flex hidden md:h-fit  justify-center ">
           <img
             src="https://i.postimg.cc/6qHLngzd/Group-4-1.png"
             alt="graph"
-            className="h-fit "
+            className="w-fit "
           />
         </div>
 
         {/* Title & Text */}
         <div className="flex flex-col items-center justify-center text-center px-2 md:px-0 ">
-          <h1 className="text-5xl  md:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight md:m-0 m-10">
+          <h1 className="text-5xl  md:text-9xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight md:m-0 m-10">
             Dive into <span className="text-orange-500">Data</span>
           </h1>
-          <p className="mt-4 text-xl  md:text-xl text-gray-700 max-w-2xl md:my-0 my-5">
+          <p className="mt-4 text-xl  md:text-2xl text-gray-700 max-w-2xl md:my-0 my-5">
             Transform raw data into actionable insights with AI-driven analytics,
             automation, and real-time intelligence.
           </p>
@@ -120,11 +120,11 @@ const Homepage = () => {
         </div>
           
         {/* Bottom Graph */}
-        <div className="flex justify-center mt-5 items-end md:mt-1 md:m-0 ">
+        <div className="flex w-full justify-center mt-5  md:mt-1 md:m-0 ">
           <img
             src="https://i.postimg.cc/prx1S6jz/Group-5-1.png"
             alt="graph"
-            className="w-full max-w-4xl object-contain"
+            className="w-fit  object-contain"
           />
         </div>
       </section>
@@ -137,7 +137,7 @@ const Homepage = () => {
           <h2 className="font-black text-3xl sm:text-4xl text-center">We Offer</h2>
 
           {/* First Row */}
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="w-full grid md:grid-cols-3 gap-6 ">
             {cardData.slice(0, 3).map((card, index) => (
               <ServiceCard
                 key={index}
@@ -145,14 +145,14 @@ const Homepage = () => {
                 title={card.title}
                 description={card.description}
                 onClick={() => console.log(`Clicked on ${card.title}`)}
-                className="p-4" // Removed width classes here, controlled by grid
+                className="w-full" // Removed width classes here, controlled by grid
               />
             ))}
           </div>
 
           
           {/* Second Row */}
-          <div className="w-full grid ">
+          <div className="w-full grid md:grid-cols-3 gap-6 ">
             {cardData.slice(3).map((card, index) => (
               <ServiceCard
                 key={index}
@@ -167,7 +167,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className='h-fit bg-white flex  justify-center w-full mt-20'>
+      <section className='h-fit flex  justify-center w-full mt-20'>
         <div className='w-full sm:h-23 justify-center items-center overflow-hidden my-30 bg-orange-400'>
           <div className="flex animate-scroll justify-center items-center text-white whitespace-nowrap  gap-60">
             <h1 className='text-6xl font-bold   px-10 py-4 italic'>Kubernetes</h1>
