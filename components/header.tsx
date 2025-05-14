@@ -24,7 +24,7 @@ const Header = () => {
           onClick={handleLogoClick}
           width={180}
           alt="logo"
-          className='cursor-pointer md:w-full w-2/6'
+          className='cursor-pointer md:w-1/12 w-2/6 flex justify-center items-center'
         />
       
 
