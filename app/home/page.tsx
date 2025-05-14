@@ -79,7 +79,7 @@ const Homepage = () => {
   const Router = useRouter();
 
   return (
-    <div className=" md:w-full w-full">
+    <div className=" md:w-full w-full overflow-x-hidden">
       <section className="md:w-full  md:h-screen bg-white flex flex-col justify-between px-4 md:px-8">
         <Headers />
 
