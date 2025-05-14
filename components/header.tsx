@@ -17,7 +17,7 @@ const Header = () => {
         <img
           src="https://i.postimg.cc/mDw3LyNW/Group-6-2.png"
           onClick={handleLogoClick}
-          width={200}
+          width={180}
           alt="logo"
         />
       </div>

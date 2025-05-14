@@ -6,10 +6,10 @@ type ButtonProps = {
     label: string;
     type?: "button" | "submit" | "reset";
 };
-const Button=({className,label,type}:ButtonProps) => {
+const Button=({className,label,type,onClick}:ButtonProps) => {
     return (
         <>
-            <button className={className} type={type}>
+            <button className={className} type={type} onClick={onClick}>
                 {label}
             </button>
     </>
