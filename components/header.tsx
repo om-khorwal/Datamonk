@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full  bg-white px-4 py-3  flex justify-between items-center z-50 relative">
+    <header className="w-full  bg-white px-4 py-5  flex justify-between items-center z-50 relative">
 
         <img
           src="https://i.postimg.cc/mDw3LyNW/Group-6-2.png"
