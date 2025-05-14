@@ -4,7 +4,8 @@ import ServiceCard from '../../components/servicecard';
 import Headers from '../../components/header';
 import Button from '../../components/button';
 import { useRouter } from 'next/navigation';
-
+import Link from 'next/link';
+import Footer from '../../components/footer';
 const cards = [
   {
     id: 1,
@@ -182,7 +183,7 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <section className='  w-full h-screen flex flex-col items-center   justify-center '>
+      <section className='  w-full h-screen  flex flex-col items-center   justify-center '>
         <div className='flex w-4/5  h-1/2'>
           <div className='w-full  flex justify-center items-center '>
             <img src="https://i.postimg.cc/cHYg4k86/TEAM-1.png" alt="img" />
@@ -216,9 +217,6 @@ const Homepage = () => {
                   </div>
                 ))}
               </div>
-
-
-              {/* View More */}
               <div className="min-w-[240px]  rounded-md p-4 flex justify-center items-center">
                 <button className="font-bold  border-2  p-2 rounded-2xl text-md text-blue-600 hover:underline">
                   View More
@@ -230,9 +228,30 @@ const Homepage = () => {
         </div>
 
       </section>
+      <section className='w-full h-fit flex flex-col items-center '>
+        <div className='flex w-full  h-2/4 justify-center items-center p-20 bg-gray-100'>
+          <div className='w-full flex justify-center items-center '>
+            <img className='max-w-xs' src="https://i.postimg.cc/7LFcrN44/group-of-four-people-discussing-project.png" alt="img" />
+          </div>
+          <div className=' w-full  m-5 bg-white rounded-2xl  p-5 justify-center items-center flex flex-col shadow-[0_3px_5px_rgb(0,0,0)]'>
+            <h1 className=' text-black font-bold  flex mb-5  text-4xl'>Jobs we have done so far:</h1>
+            <ul className='text-xl list-disc list-inside'>
+              <li>MariaDB to Postgresql</li>
+              <li>Metric Dashboard Designs</li>
+              <li>EMR to EKS migration, Spark Job</li>
+              <li>LLM & RAG Powered Chatbots</li>
+              <li>Website designing and recreation </li>
+            </ul>
 
+          </div>
+          <div className='w-full flex justify-center items-center '>
+            <img className='max-w-xs' src="https://i.postimg.cc/0ygJmM9Q/Male-engineer-constructing-metal-robots.png" alt="img" />
+          </div>
 
-
+        </div>
+      </section>
+      
+      <Footer/>
 
 
     </div>
