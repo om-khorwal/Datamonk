@@ -35,7 +35,7 @@ const Header = () => {
         <Link href="/carrer">Carrer</Link>
         <Link href="/about">About</Link>
         <Link
-          className="bg-amber-600 text-white px-4 py-2 rounded-2xl hover:bg-orange-500 transition"
+          className="bg-amber-600 text-white px-2 py-1 rounded-2xl hover:bg-orange-500 transition"
           href="/contact"
           >
           Contact
@@ -55,12 +55,12 @@ const Header = () => {
       </button>
 
       {/* Mobile Menu Overlay*/}
-      <div className={`fixed top-0 left-0 md:w-full w-1/4 h-screen bg-white flex flex-col items-center justify-center gap-8 text-xl font-bold transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden`}>
+      <div className={`fixed top-0 left-0 w-2/4 h-screen bg-white flex flex-col items-center justify-center gap-8 text-xl font-bold transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden`}>
         <Link onClick={toggleMenu} href="/home">Home</Link>
         <Link onClick={toggleMenu} href="/blog">Blog</Link>
         <Link onClick={toggleMenu} href="/carrer">Carrer</Link>
         <Link onClick={toggleMenu} href="/about">About</Link>
-        <Link onClick={toggleMenu} href="/contact" className='bg-amber-600 text-white px-6 py-2 rounded-2xl hover:bg-orange-500 transition'>Contact</Link>
+        <Link onClick={toggleMenu} href="/contact" className='bg-amber-600 text-white px-2 py-1 rounded-2xl hover:bg-orange-500 transition'>Contact</Link>
       </div>
     </header>
   );
