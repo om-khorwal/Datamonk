@@ -84,7 +84,7 @@ const Homepage = () => {
         <Headers />
 
         {/* Graph Line */}
-        <div className="m-10 md:w-full md:h-fit h-20 flex justify-center ">
+        <div className="m-5 md:w-full md:h-fit h-20 flex justify-center ">
           <img
             src="https://i.postimg.cc/6qHLngzd/Group-4-1.png"
             alt="graph"
