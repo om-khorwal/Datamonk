@@ -14,8 +14,8 @@ type ServiceCardProps = {
 
 const ServiceCard = ({ icon, title, description, onClick }:ServiceCardProps) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-1 gap-6 ">
-      <div className="relative w-full h-[90%] bg-white flex justify-center items-center flex-col rounded-2xl p-10 shadow-lg">
+    <div className="relative grid grid-cols-1 md:grid-cols-1 gap-6 ">
+      <div className=" w-full h-[90%] bg-white flex justify-center items-center flex-col rounded-2xl p-10 shadow-lg">
         <div className="absolute -top-6 left-1/2 -translate-x-1/2">
           <img className="w-20 h-20" src={icon} alt="icon" />
         </div>

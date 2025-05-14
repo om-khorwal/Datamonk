@@ -229,7 +229,7 @@ const Homepage = () => {
 
       </section>
       <section className='w-full h-fit flex flex-col items-center '>
-        <div className='flex w-full  h-2/4 justify-center items-center p-20 bg-gray-100'>
+        <div className='flex w-full  h-2/4 justify-center items-center p-20 bg-white'>
           <div className='w-full flex justify-center items-center '>
             <img className='max-w-xs' src="https://i.postimg.cc/7LFcrN44/group-of-four-people-discussing-project.png" alt="img" />
           </div>
