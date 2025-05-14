@@ -94,7 +94,7 @@ const Homepage = () => {
 
         {/* Title & Text */}
         <div className="flex flex-col items-center justify-center text-center px-2 md:px-0 ">
-          <h1 className="text-5xl  md:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight md:m-0 m-10">
+          <h1 className="text-6xl  md:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight md:m-0 m-10">
             Dive into <span className="text-orange-500">Data</span>
           </h1>
           <p className="mt-4 text-xl  md:text-xl text-gray-700 max-w-2xl md:my-0 my-5">
