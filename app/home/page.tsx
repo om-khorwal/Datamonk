@@ -80,21 +80,21 @@ const Homepage = () => {
 
   return (
     <div className=" md:w-full w-full">
-      <section className="md:w-full md:h-screen bg-white flex flex-col justify-between px-4 md:px-8">
+      <section className="md:w-full  md:h-screen bg-white flex flex-col justify-between px-4 md:px-8">
         <Headers />
 
         {/* Graph Line */}
-        <div className="m-5 md:w-full md:h-fit h-20 flex justify-center ">
+        <div className="m-5 md:w-full md:flex hidden md:h-fit h-20  justify-center ">
           <img
             src="https://i.postimg.cc/6qHLngzd/Group-4-1.png"
             alt="graph"
-            className="h-fit "
+            className=" md:w-full md:flex hidden  object-contain"
           />
         </div>
 
         {/* Title & Text */}
-        <div className="flex flex-col items-center justify-center text-center px-2 md:px-0">
-          <h1 className="text-8xl  md:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight">
+        <div className="flex flex-col items-center justify-center text-center px-2 md:px-0 m-10">
+          <h1 className="text-5xl  md:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight">
             Dive into <span className="text-orange-500">Data</span>
           </h1>
           <p className="mt-4 text-xl  md:text-xl text-gray-700 max-w-2xl">
@@ -120,7 +120,7 @@ const Homepage = () => {
         </div>
           
         {/* Bottom Graph */}
-        <div className="flex justify-center items-end mt-1">
+        <div className="flex justify-center items-end md:mt-1 md:m-0 mt-10">
           <img
             src="https://i.postimg.cc/prx1S6jz/Group-5-1.png"
             alt="graph"
