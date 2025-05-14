@@ -93,8 +93,8 @@ const Homepage = () => {
         </div>
 
         {/* Title & Text */}
-        <div className="flex flex-col items-center justify-center text-center px-2 md:px-0 m-10">
-          <h1 className="text-5xl  md:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight">
+        <div className="flex flex-col items-center justify-center text-center px-2 md:px-0 ">
+          <h1 className="text-5xl  md:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight m-10">
             Dive into <span className="text-orange-500">Data</span>
           </h1>
           <p className="mt-4 text-xl  md:text-xl text-gray-700 max-w-2xl">
@@ -104,7 +104,7 @@ const Homepage = () => {
         </div>
 
         {/* Buttons */}
-        <div className="md:my-5 my-10 flex flex-wrap justify-center gap-6 md:w-full ">
+        <div className="md:my-5 my-5 flex flex-wrap justify-center gap-6 md:w-full ">
           <Button
             label="Explore"
             className="bg-orange-500 text-white px-2 py-0 md:px-6 md:py-2 rounded-md shadow hover:bg-orange-600 transition active:scale-90"
