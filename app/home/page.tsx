@@ -94,7 +94,7 @@ const Homepage = () => {
         </div>
 
         {/* Title & Description */}
-        <div className="flex flex-col items-center justify-center text-center px-2 md:px-0 flex-1">
+        <div className="flex flex-col items-center justify-center text-center px-2 md:px-0">
           <h1 className="text-7xl sm:text-6xl md:text-7xl lg:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight">
             Dive into <span className="text-orange-500">Data</span>
           </h1>
@@ -169,7 +169,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className='h-fit bg-white flex  justify-center w-full mt-20'>
+      <section className='h-fit  flex  justify-center w-full mt-2 lg:mt-0'>
         <div className='w-full sm:h-23 justify-center items-center overflow-hidden my-30 bg-orange-400'>
           <div className="flex animate-scroll justify-center items-center text-white whitespace-nowrap  gap-60">
             <h1 className='text-6xl font-bold   px-10 py-4 italic'>Kubernetes</h1>
@@ -185,25 +185,28 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <section className='  w-full h-screen  flex flex-col items-center   justify-center '>
-        <div className='flex w-4/5  h-1/2'>
-          <div className='w-full  flex justify-center items-center '>
-            <img src="https://i.postimg.cc/cHYg4k86/TEAM-1.png" alt="img" />
+
+      <section className='  w-full flex flex-col items-center justify-center gap-10 py-10 px-4 '>
+        <div className='flex flex-col lg:flex-row w-full max-w-6xl gap-6 items-center '>
+          <div className='w-full lg:w-1/2 flex justify-center'>
+            <img src="https://i.postimg.cc/cHYg4k86/TEAM-1.png" alt="img" className='w-full max-w-md object-contain'/>
           </div>
-          < div className='w-full  flex  flex-col justify-center '>
-            <h1 className='text-2xl font-black text-orange-500'>About Us</h1>
-            <h1 className=' text-black font-bold  text-4xl'>A team of innovators, data enthusiasts, and problem-solvers.</h1>
-            <p className='text-xl'>We are a passionate group of data scientists, engineers, and strategists dedicated to transforming raw data into powerful insights.
+          < div className='w-full lg:w-1/2 flex flex-col gap-4 justify-center items-start'>
+            <h1 className='text-xl lg:text-2xl font-bold text-orange-500'>About Us</h1>
+            <h1 className=' text-black font-bold  text-3xl lg:text-4xl'>A team of innovators, data enthusiasts, and problem-solvers.</h1>
+            <p className='text-base lg:text-lg text-gray-700'>We are a passionate group of data scientists, engineers, and strategists dedicated to transforming raw data into powerful insights.
               At DataMonk, we believe in innovation, collaboration, and driving businesses toward success with AI-powered analytics.
               ‍Driven by Data. Inspired by Innovation. Focused on You.</p>
           </div>
         </div>
-        <hr />
-        <div className='w-full h-1/2 flex justify-start items-center'>
+
+        <hr className='w-full max-w-6xl border-gray-300'/>
+
+        <div className='w-full flex flex-col items-start '>
           <div className='w-1/4 flex justify-center items-center'>
             <h1 className='font-bold  text-3xl'>BLogs</h1>
           </div>
-          <div className="w-9/12 overflow-x-auto flex ">
+          <div className="w-full lg:w-9/12 overflow-x-auto flex ">
             <div className="flex w-max gap-6 px-2 py-2">
               <div className="flex gap-4 overflow-x-auto w-fit p-4">
                 {cards.map((card) => (
