@@ -2,6 +2,7 @@
 import React from "react";
 import Header from "../../components/header";
 import BlogCard from "../../components/blogcard";
+import Footer from "../../components/footer";
 const blogData = [
   {
     title: "AI in Healthcare",
@@ -87,7 +88,15 @@ const blog = () => {
             }
           </div>
         </div>
+        <div className="flex justify-center items-center mt-10 gap-5 ">
+          <p></p>
+          <p className="bg-orange-500 text-white px-2 rounded-[100%] py-1 flex justify-center items-center">1</p>
+           <p className="bg-orange-500 text-white px-2 rounded-[100%] py-1 flex justify-center items-center">2</p>
+          <p className="bg-orange-500 text-white px-2 rounded-[100%] py-1 flex justify-center items-center">3</p>
+         
+        </div>
       </main>
+      <Footer/>
     </div>
   );
 };
