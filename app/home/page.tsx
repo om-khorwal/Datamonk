@@ -108,7 +108,7 @@ const Homepage = () => {
         <div className="flex flex-wrap justify-center gap-4 md:gap-3 w-full mb-2 mt-2">
           <Button
             label="Explore"
-            className="bg-orange-500 text-white xl:px-6 xl:py-2 xl:text-xl px-3 py-2 md:px-2 md:py-1 rounded-md shadow hover:bg-orange-600 transition active:scale-90"
+            className="bg-orange-500 text-white  xl:px-6 xl:py-2 xl:text-xl px-3 py-2 md:px-2 md:py-1 rounded-md shadow hover:bg-orange-600 transition active:scale-90"
             onClick={() => {
               document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
             }}
@@ -116,7 +116,7 @@ const Homepage = () => {
           <Button
             onClick={() => Router.push('/contact')}
             label="Connect"
-            className="bg-white border-2 border-orange-500 xl:px-6 xl:py-2 xl:text-xl px-3 py-2  text-orange-500 px-3 py-0 md:px-2 md:py-0 rounded-md shadow hover:bg-orange-500 hover:text-white transition active:scale-90"
+            className="bg-white border-2 border-orange-500 xl:px-6 xl:py-2 xl:text-xl px-3 py-2  text-orange-500  md:px-2 md:py-0 rounded-md shadow hover:bg-orange-500 hover:text-white transition active:scale-90"
           />
         </div>
           
