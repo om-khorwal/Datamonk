@@ -167,23 +167,23 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className='h-fit flex  justify-center w-full mt-20'>
-        <div className='w-full sm:h-23 justify-center items-center overflow-hidden my-30 bg-orange-400'>
-          <div className="flex animate-scroll justify-center items-center text-white whitespace-nowrap  gap-60">
-            <h1 className='text-6xl font-bold   px-10 py-4 italic'>Kubernetes</h1>
-            <h1 className='text-6xl font-bold px-10   py-4 italic'>AWS</h1>
-            <h1 className='text-6xl font-bold  px-10 py-4 italic'>Docker</h1>
-            <h1 className='text-6xl font-bold  px-10 py-4 italic'>DevOps</h1>
-            <h1 className='text-6xl font-bold px-10 py-4 italic'>AI</h1>
-            <h1 className='text-6xl font-bold px-10 py-4 italic'>Kubernetes</h1>
-            <h1 className='text-6xl font-bold px-10 py-4 italic'>AWS</h1>
-            <h1 className='text-6xl font-bold  px-10 py-4 italic'>Docker</h1>
-            <h1 className='text-6xl font-bold  px-10 py-4 italic'>DevOps</h1>
-            <h1 className='text-6xl font-bold px-10 py-4 italic'>AI</h1>
+      <section className='h-fit flex md:w-fit justify-center w-full md:mt-20 mt-0'>
+        <div className='w-full h-16 md:h-23 justify-center items-center overflow-hidden my-10 md:my-30 bg-orange-400'>
+          <div className="flex animate-scroll justify-center text-center items-center text-white whitespace-nowrap  gap-60">
+            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>Kubernetes</h1>
+            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>AWS</h1>
+            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>Docker</h1>
+            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>DevOps</h1>
+            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>AI</h1>
+            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>Kubernetes</h1>
+            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>AWS</h1>
+            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>Docker</h1>
+            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>DevOps</h1>
+            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>AI</h1>
           </div>
         </div>
       </section>
-      <section className='  w-full h-screen  flex flex-col items-center   justify-center '>
+      <section className=' md:w-full h-screen  flex flex-col items-center   justify-center '>
         <div className='flex w-4/5  h-1/2'>
           <div className='w-full  flex justify-center items-center '>
             <img src="https://i.postimg.cc/cHYg4k86/TEAM-1.png" alt="img" />
