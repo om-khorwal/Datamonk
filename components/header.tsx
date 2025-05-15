@@ -29,7 +29,7 @@ const Header = () => {
       
 
       {/* Desktop Menu*/}
-      <nav className='hidden md:flex gap-8 font-bold text-black items-center'>
+      <nav className='hidden md:flex gap-8 text-xs font-bold text-black items-center'>
         <Link href="/home">Home</Link>
         <Link href="/blog">Blog</Link>
         <Link href="/carrer">Carrer</Link>

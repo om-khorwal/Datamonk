@@ -80,34 +80,35 @@ const Homepage = () => {
 
   return (
     <div className=" md:w-full w-full overflow-x-hidden">
-      <section className="md:w-full  md:h-screen bg-white flex flex-col justify-between px-4 md:px-8">
+      <section className="w-full h-screen bg-white flex flex-col justify-between items-center px-4 md:px-0  overflow-hidden">
+        {/* Header */}
         <Headers />
 
-        {/* Graph Line */}
-        <div className=" md:w-full md:flex hidden md:h-fit  justify-center ">
+        {/* Top Graph Image */}
+        <div className="flex justify-center w-full max-h-[100px] overflow-hidden">
           <img
             src="https://i.postimg.cc/6qHLngzd/Group-4-1.png"
             alt="graph"
-            className="w-fit "
+            className="h-full w-[100%]  md:w-[70%] lg:w-[70%]"
           />
         </div>
 
-        {/* Title & Text */}
-        <div className="flex flex-col items-center justify-center text-center px-2 md:px-0 ">
-          <h1 className="text-5xl  md:text-9xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight md:m-0 m-10">
+        {/* Title & Description */}
+        <div className="flex flex-col items-center justify-center text-center px-2 md:px-0 flex-1">
+          <h1 className="text-7xl sm:text-6xl md:text-7xl lg:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight">
             Dive into <span className="text-orange-500">Data</span>
           </h1>
-          <p className="mt-4 text-xl  md:text-2xl text-gray-700 max-w-2xl md:my-0 my-5">
-            Transform raw data into actionable insights with AI-driven analytics,
-            automation, and real-time intelligence.
+          <p className="mt-2 text-base sm:text-[1rem] md:text-[1rem] lg:text-[1rem] text-gray-700 max-w-2xl px-2">
+            Transform raw data into actionable insights with AI-driven analytics, automation,
+            and real-time intelligence.
           </p>
         </div>
 
         {/* Buttons */}
-        <div className="md:my-5 my-5 flex flex-wrap justify-center gap-6 md:w-full ">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-3 w-full mb-2 mt-2">
           <Button
             label="Explore"
-            className="bg-orange-500 text-white px-2 py-0 md:px-6 md:py-2 rounded-md shadow hover:bg-orange-600 transition active:scale-90"
+            className="bg-orange-500 text-white px-3 py-2 md:px-2 md:py-1 rounded-md shadow hover:bg-orange-600 transition active:scale-90"
             onClick={() => {
               document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
             }}
@@ -115,29 +116,30 @@ const Homepage = () => {
           <Button
             onClick={() => Router.push('/contact')}
             label="Connect"
-            className="bg-white border-2 border-orange-500 text-orange-500 px-2 py-0 md:px-6 md:py-2 rounded-md shadow hover:bg-orange-500 hover:text-white transition active:scale-90"
+            className="bg-white border-2 border-orange-500 text-orange-500 px-3 py-0 md:px-2 md:py-0 rounded-md shadow hover:bg-orange-500 hover:text-white transition active:scale-90"
           />
         </div>
           
-        {/* Bottom Graph */}
-        <div className="flex w-full justify-center mt-5  md:mt-1 md:m-0 ">
+        {/* Bottom Graph Image */}
+        <div className="flex justify-center w-full overflow-hidden">
           <img
             src="https://i.postimg.cc/prx1S6jz/Group-5-1.png"
             alt="graph"
-            className="w-fit  object-contain"
+            className="h-full w-[100%] md:w-[80%] lg:w-[60%] "
           />
         </div>
       </section>
 
+
       <section
         id="features"
-        className="flex flex-col items-center justify-center w-full min-h-screen px-4 py-10 sm:px-6 md:px-12 lg:px-20 gap-10 bg-white"
+        className="flex flex-col items-center justify-center w-full lg:h-screen px-4 py-2 sm:px-6 md:px-10 lg:px-10 gap-6 bg-white"
       >
-        <div className="flex flex-col items-center rounded-2xl bg-gray-100 w-full max-w-7xl p-6 sm:p-10 gap-10 shadow-gray-700 shadow-[0_0px_15px_rgb(0,0,0)]">
-          <h2 className="font-black text-3xl sm:text-4xl text-center">We Offer</h2>
+        <div className="flex flex-col items-center justify-around rounded-2xl bg-gray-100 w-full md:w-[80%] md:h-full lg:h-[100vh] max-w-7xl p-6 sm:p-4 lg:gap-0 gap-10 md:gap-6 shadow-gray-700 shadow-[0_0px_15px_rgb(0,0,0)]">
+          <h2 className="font-black text-2xl sm:text-3xl text-center">We Offer</h2>
 
           {/* First Row */}
-          <div className="w-full grid md:grid-cols-3 gap-6 ">
+          <div className="w-full md:w-full lg:w-[90%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 ">
             {cardData.slice(0, 3).map((card, index) => (
               <ServiceCard
                 key={index}
@@ -145,14 +147,14 @@ const Homepage = () => {
                 title={card.title}
                 description={card.description}
                 onClick={() => console.log(`Clicked on ${card.title}`)}
-                className="w-full" // Removed width classes here, controlled by grid
+                className="p-4 " // Removed width classes here, controlled by grid
               />
             ))}
           </div>
 
           
           {/* Second Row */}
-          <div className="w-full grid md:grid-cols-3 gap-6 ">
+          <div className="w-full lg:w-[90%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
             {cardData.slice(3).map((card, index) => (
               <ServiceCard
                 key={index}
@@ -167,23 +169,23 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className='h-fit flex md:w-fit justify-center w-full md:mt-20 mt-0'>
-        <div className='w-full h-16 md:h-23 justify-center items-center overflow-hidden my-10 md:my-30 bg-orange-400'>
-          <div className="flex animate-scroll justify-center text-center items-center text-white whitespace-nowrap  gap-60">
-            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>Kubernetes</h1>
-            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>AWS</h1>
-            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>Docker</h1>
-            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>DevOps</h1>
-            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>AI</h1>
-            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>Kubernetes</h1>
-            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>AWS</h1>
-            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>Docker</h1>
-            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>DevOps</h1>
-            <h1 className='text-3xl md:text-5xl font-bold px-10 py-4 italic'>AI</h1>
+      <section className='h-fit bg-white flex  justify-center w-full mt-20'>
+        <div className='w-full sm:h-23 justify-center items-center overflow-hidden my-30 bg-orange-400'>
+          <div className="flex animate-scroll justify-center items-center text-white whitespace-nowrap  gap-60">
+            <h1 className='text-6xl font-bold   px-10 py-4 italic'>Kubernetes</h1>
+            <h1 className='text-6xl font-bold px-10   py-4 italic'>AWS</h1>
+            <h1 className='text-6xl font-bold  px-10 py-4 italic'>Docker</h1>
+            <h1 className='text-6xl font-bold  px-10 py-4 italic'>DevOps</h1>
+            <h1 className='text-6xl font-bold px-10 py-4 italic'>AI</h1>
+            <h1 className='text-6xl font-bold px-10 py-4 italic'>Kubernetes</h1>
+            <h1 className='text-6xl font-bold px-10 py-4 italic'>AWS</h1>
+            <h1 className='text-6xl font-bold  px-10 py-4 italic'>Docker</h1>
+            <h1 className='text-6xl font-bold  px-10 py-4 italic'>DevOps</h1>
+            <h1 className='text-6xl font-bold px-10 py-4 italic'>AI</h1>
           </div>
         </div>
       </section>
-      <section className=' md:w-full h-screen  flex flex-col items-center   justify-center '>
+      <section className='  w-full h-screen  flex flex-col items-center   justify-center '>
         <div className='flex w-4/5  h-1/2'>
           <div className='w-full  flex justify-center items-center '>
             <img src="https://i.postimg.cc/cHYg4k86/TEAM-1.png" alt="img" />
@@ -229,7 +231,7 @@ const Homepage = () => {
 
       </section>
       <section className='w-full h-fit flex flex-col items-center '>
-        <div className='flex w-full  h-2/4 justify-center items-center p-20 bg-white'>
+        <div className='flex w-full  h-2/4 justify-center items-center p-20 bg-gray-100'>
           <div className='w-full flex justify-center items-center '>
             <img className='max-w-xs' src="https://i.postimg.cc/7LFcrN44/group-of-four-people-discussing-project.png" alt="img" />
           </div>
