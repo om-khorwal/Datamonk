@@ -85,7 +85,7 @@ const Homepage = () => {
         <Headers />
 
         {/* Top Graph Image */}
-        <div className="flex justify-center w-full lg:max-h-[100px] xl:max-h-fit overflow-hidden">
+        <div className="lg:flex xl:flex hidden justify-center w-full lg:max-h-[100px] xl:max-h-fit overflow-hidden">
           <img
             src="https://i.postimg.cc/6qHLngzd/Group-4-1.png"
             alt="graph"
