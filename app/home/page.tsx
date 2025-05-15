@@ -135,7 +135,7 @@ const Homepage = () => {
   id="features"
   className="flex flex-col items-center justify-center w-full xl:min-h-screen lg:h-screen  px-4 py-2 sm:px-6 md:px-10 lg:px-10 bg-white"
 >
-  <div className="flex flex-col items-center xl:justify-around  lg:justify-around rounded-2xl xl:p-10 bg-gray-100 w-full md:w-[80%] md:h-full lg:h-[100vh] lg:max-w-7xl p-6 sm:p-4 xl:gap-6 gap-10 md:gap-6 shadow-gray-700 shadow-[0_0px_15px_rgb(0,0,0)]">
+  <div className="flex flex-col items-center xl:justify-around  lg:justify-around rounded-2xl xl:p-10 lg:p-10  bg-gray-100 w-full md:w-[80%] md:h-full lg:h-[100vh] lg:max-w-7xl p-6 sm:p-4 xl:gap-6 gap-10 md:gap-6 shadow-gray-700 shadow-[0_0px_15px_rgb(0,0,0)]">
     
     <h2 className="font-black xl:text-4xl text-2xl sm:text-3xl text-center">We Offer</h2>
 
