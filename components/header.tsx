@@ -17,19 +17,19 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full  bg-white px-4 py-5  flex justify-between items-center z-50 relative">
+    <header className="w-full  bg-white px-4 py-5  flex justify-between items-center ">
 
         <img
           src="https://i.postimg.cc/mDw3LyNW/Group-6-2.png"
           onClick={handleLogoClick}
           width={180}
           alt="logo"
-          className='cursor-pointer md:w-1/12 w-2/6 flex justify-center items-center'
+          className='cursor-pointer xl:w-1/12 md:w-1/12 w-2/6 flex justify-center items-center'
         />
       
 
       {/* Desktop Menu*/}
-      <nav className='hidden md:flex gap-8 text-xs font-bold text-black items-center'>
+      <nav className='hidden xl:flex  gap-8 font-bold text-black items-center'>
         <Link href="/home">Home</Link>
         <Link href="/blog">Blog</Link>
         <Link href="/carrer">Carrer</Link>

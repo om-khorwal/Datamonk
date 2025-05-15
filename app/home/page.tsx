@@ -85,20 +85,20 @@ const Homepage = () => {
         <Headers />
 
         {/* Top Graph Image */}
-        <div className="flex justify-center w-full max-h-[100px] overflow-hidden">
+        <div className="lg:flex xl:flex hidden justify-center w-full lg:max-h-[100px] xl:max-h-fit overflow-hidden">
           <img
             src="https://i.postimg.cc/6qHLngzd/Group-4-1.png"
             alt="graph"
-            className="h-full w-[100%]  md:w-[70%] lg:w-[70%]"
+            className="h-full w-full  md:w-[80%] xl:w-[75%] lg:w-[70%]"
           />
         </div>
 
         {/* Title & Description */}
-        <div className="flex flex-col items-center justify-center text-center px-2 md:px-0">
+        <div className="flex flex-col items-center justify-center text-center px-2 md:px-0 flex-1">
           <h1 className="text-7xl sm:text-6xl md:text-7xl lg:text-7xl font-bold drop-shadow-[0_2px_1px_rgb(0,0,0)] leading-tight">
             Dive into <span className="text-orange-500">Data</span>
           </h1>
-          <p className="mt-2 text-base sm:text-[1rem] md:text-[1rem] lg:text-[1rem] text-gray-700 max-w-2xl px-2">
+          <p className="mt-2 sm:text-[1rem] md:text-[1rem] lg:text-[1rem] xl:text-2xl text-gray-700 xl:w-[55%] px-2">
             Transform raw data into actionable insights with AI-driven analytics, automation,
             and real-time intelligence.
           </p>
@@ -108,7 +108,7 @@ const Homepage = () => {
         <div className="flex flex-wrap justify-center gap-4 md:gap-3 w-full mb-2 mt-2">
           <Button
             label="Explore"
-            className="bg-orange-500 text-white px-3 py-2 md:px-2 md:py-1 rounded-md shadow hover:bg-orange-600 transition active:scale-90"
+            className="bg-orange-500 text-white xl:px-6 xl:py-2 xl:text-xl px-3 py-2 md:px-2 md:py-1 rounded-md shadow hover:bg-orange-600 transition active:scale-90"
             onClick={() => {
               document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
             }}
@@ -116,7 +116,7 @@ const Homepage = () => {
           <Button
             onClick={() => Router.push('/contact')}
             label="Connect"
-            className="bg-white border-2 border-orange-500 text-orange-500 px-3 py-0 md:px-2 md:py-0 rounded-md shadow hover:bg-orange-500 hover:text-white transition active:scale-90"
+            className="bg-white border-2 border-orange-500 xl:px-6 xl:py-2 xl:text-xl px-3 py-2  text-orange-500 px-3 py-0 md:px-2 md:py-0 rounded-md shadow hover:bg-orange-500 hover:text-white transition active:scale-90"
           />
         </div>
           
@@ -132,42 +132,43 @@ const Homepage = () => {
 
 
       <section
-        id="features"
-        className="flex flex-col items-center justify-center w-full lg:h-screen px-4 py-2 sm:px-6 md:px-10 lg:px-10 gap-6 bg-white"
-      >
-        <div className="flex flex-col items-center justify-around rounded-2xl bg-gray-100 w-full md:w-[80%] md:h-full lg:h-[100vh] max-w-7xl p-6 sm:p-4 lg:gap-0 gap-10 md:gap-6 shadow-gray-700 shadow-[0_0px_15px_rgb(0,0,0)]">
-          <h2 className="font-black text-2xl sm:text-3xl text-center">We Offer</h2>
+  id="features"
+  className="flex flex-col items-center justify-center w-full xl:min-h-screen lg:h-screen  px-4 py-2 sm:px-6 md:px-10 lg:px-10 bg-white"
+>
+  <div className="flex flex-col items-center xl:justify-around  lg:justify-around rounded-2xl xl:p-10 bg-gray-100 w-full md:w-[80%] md:h-full lg:h-[100vh] lg:max-w-7xl p-6 sm:p-4 xl:gap-6 gap-10 md:gap-6 shadow-gray-700 shadow-[0_0px_15px_rgb(0,0,0)]">
+    
+    <h2 className="font-black xl:text-4xl text-2xl sm:text-3xl text-center">We Offer</h2>
 
-          {/* First Row */}
-          <div className="w-full md:w-full lg:w-[90%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 ">
-            {cardData.slice(0, 3).map((card, index) => (
-              <ServiceCard
-                key={index}
-                icon={card.icon}
-                title={card.title}
-                description={card.description}
-                onClick={() => console.log(`Clicked on ${card.title}`)}
-                className="p-4 " // Removed width classes here, controlled by grid
-              />
-            ))}
-          </div>
+    {/* First Row */}
+    <div className="w-full md:w-full lg:w-[80%] xl:w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 xl:gap-6">
+      {cardData.slice(0, 3).map((card, index) => (
+        <ServiceCard
+          key={index}
+          icon={card.icon}
+          title={card.title}
+          description={card.description}
+          onClick={() => console.log(`Clicked on ${card.title}`)}
+          className="p-4"
+        />
+      ))}
+    </div>
 
-          
-          {/* Second Row */}
-          <div className="w-full lg:w-[90%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
-            {cardData.slice(3).map((card, index) => (
-              <ServiceCard
-                key={index}
-                icon={card.icon}
-                title={card.title}
-                description={card.description}
-                onClick={() => console.log(`Clicked on ${card.title}`)}
-                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" // Passing className here
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+    {/* Second Row */}
+    <div className="w-full md:w-full lg:w-[80%] xl:w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 xl:gap-6">
+      {cardData.slice(3).map((card, index) => (
+        <ServiceCard
+          key={index}
+          icon={card.icon}
+          title={card.title}
+          description={card.description}
+          onClick={() => console.log(`Clicked on ${card.title}`)}
+          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4"
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
 
       <section className='h-fit  flex  justify-center w-full mt-2 lg:mt-0'>
         <div className='w-full sm:h-23 justify-center items-center overflow-hidden my-30 bg-orange-400'>
