@@ -3,7 +3,7 @@ import React from "react";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 
-const carrer = () => {
+const about = () => {
   return (
     <div className="h-screen w-full justify-between flex flex-col ">
       <Header />
@@ -58,7 +58,7 @@ const carrer = () => {
     </div>
   );
 };
-export default carrer;
+export default about;
 
   // <div className="bg-violet-400 xl:flex w-full justify-center  items-center my-2  xl: ">
   //         <div className="flex justify-center items-center p-10 ">

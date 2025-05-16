@@ -80,6 +80,7 @@ const Homepage = () => {
 
   return (
     <div className=" md:w-full w-full overflow-x-hidden">
+
       <section className="w-full min-h-screen  bg-white flex flex-col justify-between items-center px-4 md:px-0  overflow-hidden">
         {/* Header */}
         <Headers />
@@ -133,10 +134,7 @@ const Homepage = () => {
         </div>
       </section>
 
-
-      <section 
-        id="features"
-        className=" flex flex-col items-center min-h-screen justify-center w-full py-4 sm:py-2 px-4 sm:px-6 md:px-8 lg:px-8 gap-6 bg-white"
+      <section id="features" className=" flex flex-col items-center min-h-screen justify-center w-full py-10 sm:py-2 px-4 sm:px-6 md:px-8 lg:px-8 gap-6 bg-white"
       >
         <div className="flex flex-col items-center justify-around rounded-2xl bg-gray-100 w-full md:w-[90%] max-w-7xl p-4 sm:p-6 lg:p-8 gap-8 shadow-gray-700 shadow-[0_0px_15px_rgb(0,0,0)]">
           <h2 className="font-black text-2xl sm:text-3xl text-center mt-4">We Offer</h2>
@@ -157,8 +155,7 @@ const Homepage = () => {
         </div>
       </section>
 
-
-      <section className='h-fit bg-white flex  justify-center w-full mt-2'>
+      <section className='h-fit bg-white flex  justify-center w-full py-10 xl:py-5'>
         <div className='w-full sm:h-23 justify-center items-center overflow-hidden my-4 bg-orange-400'>
           <div className="flex animate-scroll justify-center items-center text-white whitespace-nowrap  gap-60">
             <h1 className='text-6xl font-bold   px-10 py-4 italic'>Kubernetes</h1>
@@ -174,8 +171,9 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <section className='  w-full flex flex-col items-center justify-center gap-10 py-5 px-4 '>
-      <div className='flex flex-col lg:flex-row w-full max-w-6xl gap-6 items-center '>
+
+      <section className='w-full flex flex-col items-center justify-center gap-10 py-10 px-4 '>
+      <div className='flex flex-col lg:flex-row w-full max-w-6xl gap-6 items-center py-10 xl:py-5 '>
           <div className='w-full lg:w-1/2 flex justify-center'>
             <img src="https://i.postimg.cc/cHYg4k86/TEAM-1.png" alt="img" className='w-full max-w-md object-contain'/>
           </div>
@@ -190,7 +188,7 @@ const Homepage = () => {
 
         <hr className='w-full max-w-6xl border-gray-300'/>
         
-        <div className='w-full xl:h-1/2 xl:flex xl:justify-start xl:items-center'>
+        <div className='w-full xl:h-1/2 xl:flex xl:justify-start xl:items-center py-10 xl:py-5'>
           <div className='xl:w-1/4 flex justify-center items-center'>
             <h1 className='font-bold  text-3xl'>BLogs</h1>
           </div>
@@ -221,9 +219,10 @@ const Homepage = () => {
         </div>
 
       </section>
-      <section className='w-full h-fit flex flex-col items-center py-5'>
+
+      <section className='w-full h-fit flex flex-col items-center py-10 xl:py-5'>
         <div className='xl:flex  xl:w-full  h-2/4 justify-center items-center xl:p-20 bg-gray-100'>
-          <div className='w-full flex justify-center items-center '>
+          <div className='w-full flex justify-center items-center py-5 xl:py-2'>
             <img className='max-w-xs' src="https://i.postimg.cc/7LFcrN44/group-of-four-people-discussing-project.png" alt="img" />
           </div>
           <div className=' w-full my-10 xl:m-5 bg-white rounded-lg  py-5 px-5  xl:py-5 xl: justify-center items-center flex flex-col shadow-[0_3px_5px_rgb(0,0,0)]'>
@@ -238,7 +237,7 @@ const Homepage = () => {
             </ul>
             </div>
           </div>
-          <div className='w-full flex justify-center items-center '>
+          <div className='w-full flex justify-center items-center py-5 xl:py-2 '>
             <img className='max-w-xs' src="https://i.postimg.cc/0ygJmM9Q/Male-engineer-constructing-metal-robots.png" alt="img" />
           </div>
 
