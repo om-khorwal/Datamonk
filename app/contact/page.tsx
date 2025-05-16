@@ -40,24 +40,25 @@ const contact = () => {
           </div>
         </div>
         <div className="xl:w-2/3 h-full  xl:flex  justify-center items-center">
-          <div className="h-104  flex flex-col  justify-end">
+          <div className="h-108  flex flex-col  justify-end">
             <h1 className="text-[1.5rem] font-black">Simplifying</h1>
             <div className="xl:w-36 xl:h-32 border-2 ">
 
             </div>
           </div>
-          <div className="h-104  flex flex-col  justify-center">
+          <div className="h-108  flex flex-col  justify-center">
             <h1 className="text-[1.5rem] font-black">Data</h1>
 
             <div className="xl:w-36  xl:h-32 border-2 ">
 
             </div>
           </div>
-          <div className="h-104  flex flex-col  justify-start">
+          <div className="h-108  flex flex-col  justify-start">
             <h1 className="text-[1.5rem] font-black">Intelligence</h1>
 
-            <div className="xl:w-36 xl: h-32 border-2">
-            </div>
+          <div className="h-77 xl:h-104 flex flex-col  justify-start">
+            <h1 className="xl:text-[1.5rem] font-black">Intelligence</h1>
+            <div className="w-24 h-24 xl:w-36 xl:h-32 border-2"></div>
           </div>
         </div>
       </main>
