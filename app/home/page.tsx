@@ -127,7 +127,7 @@ const Homepage = () => {
             <img
               src="https://i.postimg.cc/prx1S6jz/Group-5-1.png"
               alt="graph"
-              className="h-full w-[100%] md:w-[80%] lg:w-[60%] "
+              className="h-full w-[100%] md:w-[80%] lg:w-[70%] "
               />
           </div>
           <hr className='w-full max-w-5xl mx-auto border-gray-300 '/>
@@ -186,7 +186,7 @@ const Homepage = () => {
           </div>
         </div>  
 
-        <hr className='w-full max-w-6xl border-gray-300'/>
+        <hr className='w-full max-w-7xl border-gray-300'/>
         
         <div className='w-full xl:h-1/2 xl:flex xl:justify-start xl:items-center py-10 xl:py-5'>
           <div className='xl:w-1/4 flex justify-center items-center'>

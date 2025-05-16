@@ -56,10 +56,10 @@ const Header = () => {
 
       {/* Mobile Menu Overlay*/}
       <div className={`fixed top-0 left-0 w-2/4 h-screen  flex flex-col items-center justify-center gap-8 text-xl font-bold transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden z-10 bg-gray-300`}>
-        <Link onClick={toggleMenu} href="/home">Home</Link>
-        <Link onClick={toggleMenu} href="/blog">Blog</Link>
-        <Link onClick={toggleMenu} href="/carrer">Carrer</Link>
-        <Link onClick={toggleMenu} href="/about">About</Link>
+        <Link onClick={toggleMenu} href="/home" className="hover:text-orange-600 transition duration-200">Home</Link>
+        <Link onClick={toggleMenu} href="/blog"className="hover:text-orange-600 transition duration-200">Blog</Link>
+        <Link onClick={toggleMenu} href="/carrer"className="hover:text-orange-600 transition duration-200">Carrer</Link>
+        <Link onClick={toggleMenu} href="/about" className="hover:text-orange-600 transition duration-200">About</Link>
         <Link onClick={toggleMenu} href="/contact" className='bg-amber-600 text-white px-2 py-1 rounded-2xl hover:bg-orange-500 transition'>Contact</Link>
       </div>
     </header>
