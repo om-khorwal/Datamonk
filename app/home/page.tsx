@@ -226,15 +226,17 @@ const Homepage = () => {
           <div className='w-full flex justify-center items-center '>
             <img className='max-w-xs' src="https://i.postimg.cc/7LFcrN44/group-of-four-people-discussing-project.png" alt="img" />
           </div>
-          <div className=' w-full my-10 xl:m-5 bg-white rounded-lg  py-5 px-5  xl:py-5 xl:px-0 justify-center  item-center flex flex-col shadow-[0_3px_5px_rgb(0,0,0)]'>
-            <h1 className=' text-black font-bold  xl:text-center text-2xl'>Jobs we have done so far:</h1>
-            <ul className='text-[1rem] list-disc list-inside ml-2 xl:ml-12'>
+          <div className=' w-full my-10 xl:m-5 bg-white rounded-lg  py-5 px-5  xl:py-5 xl: justify-center items-center flex flex-col shadow-[0_3px_5px_rgb(0,0,0)]'>
+            <h1 className=' text-black font-bold  text-2xl'>Jobs we have done so far:</h1>
+            <div className='flex justify-center items-center'>
+            <ul className='text-[1rem] list-disc list-inside ml-2  '>
               <li>MariaDB to Postgresql</li>
               <li>Metric Dashboard Designs</li>
               <li>EMR to EKS migration, Spark Job</li>
               <li>LLM & RAG Powered Chatbots</li>
               <li>Website designing and recreation </li>
             </ul>
+            </div>
           </div>
           <div className='w-full flex justify-center items-center '>
             <img className='max-w-xs' src="https://i.postimg.cc/0ygJmM9Q/Male-engineer-constructing-metal-robots.png" alt="img" />
