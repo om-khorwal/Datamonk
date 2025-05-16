@@ -5,7 +5,7 @@ import Footer from "../../components/footer";
 
 const carrer = () => {
   return (
-     <div className="h-screen w-full justify-between flex flex-col ">
+     <div className="lg:h-screen xl:h-screen w-full justify-between flex flex-col ">
       <Header />
         <div className="gap-1 flex flex-col justify-between md:p-10 p-5">
           <h1 className="font-bold text-4xl md:text-5xl">Carrer</h1>
