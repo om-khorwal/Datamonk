@@ -22,62 +22,38 @@ const contact = () => {
               type="text"
               name="Name"
               placeholder="Your Name"
-<<<<<<< Updated upstream
               className="block w-full p-2 mb-4 border-b-2   focus:text-orange-500"
-=======
-              className="block w-full p-2 mb-4 rounded-md border-b-2"
->>>>>>> Stashed changes
             />
             <input
               type="email"
               name="Email"
               placeholder="Your Email"
-<<<<<<< Updated upstream
               className="block w-full p-2 mb-4 border-b-2"
-=======
-              className="block w-full p-2 mb-4 rounded-md border-b-2"
->>>>>>> Stashed changes
             />
             <input
               type="text"
               name="Message"
               placeholder="Your Message"
-<<<<<<< Updated upstream
               className="w-full p-2 mb-4 border-b-2 h-30"
-=======
-              className="w-full p-2 mb-4 rounded-md border-b-2 h-30"
->>>>>>> Stashed changes
             />
             <button className="rounded-2xl text-white w-1/2 xl:py-2 xl:px-10 xl:my-14 bg-orange-500"> Send</button>
           </div>
         </div>
         <div className="xl:w-2/3 h-full  xl:flex  justify-center items-center">
-<<<<<<< Updated upstream
           <div className="h-104  flex flex-col  justify-end">
-=======
-          <div className="h-108  flex flex-col  justify-end">
->>>>>>> Stashed changes
             <h1 className="text-[1.5rem] font-black">Simplifying</h1>
             <div className="xl:w-36 xl:h-32 border-2 ">
 
             </div>
           </div>
-<<<<<<< Updated upstream
           <div className="h-104  flex flex-col  justify-center">
-=======
-          <div className="h-108  flex flex-col  justify-center">
->>>>>>> Stashed changes
             <h1 className="text-[1.5rem] font-black">Data</h1>
 
             <div className="xl:w-36  xl:h-32 border-2 ">
 
             </div>
           </div>
-<<<<<<< Updated upstream
           <div className="h-104  flex flex-col  justify-start">
-=======
-          <div className="h-108  flex flex-col  justify-start">
->>>>>>> Stashed changes
             <h1 className="text-[1.5rem] font-black">Intelligence</h1>
 
             <div className="xl:w-36 xl: h-32 border-2">
