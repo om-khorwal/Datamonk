@@ -127,7 +127,7 @@ const Homepage = () => {
             <img
               src="https://i.postimg.cc/prx1S6jz/Group-5-1.png"
               alt="graph"
-              className="h-full w-[100%] md:w-[80%] lg:w-[60%] "
+              className="h-full w-[100%] xl:w-[85%] lg:w-[60%] "
               />
           </div>
           <hr className='w-full max-w-5xl mx-auto border-gray-300 '/>
@@ -148,7 +148,7 @@ const Homepage = () => {
                 icon={card.icon}
                 title={card.title}
                 description={card.description}
-                onClick={() => console.log(`Clicked on ${card.title}`)}
+                onClick={() => Router.push('/contact')}
               />
             ))}
           </div>
@@ -202,16 +202,18 @@ const Homepage = () => {
                   >
                     <img src={card.image} alt={card.title} className="w-full h-40 object-cover" />
                     <p className="mt-2 font-semibold">{card.title}</p>
-                    <button className="mt-2 bg-blue-500 text-white px-4 py-1 rounded">
+                    <button className="mt-2 bg-orange-500 text-white px-4 py-1 rounded">
                       Read more
                     </button>
                   </div>
                 ))}
               </div>
               <div className="min-w-[240px]  rounded-md p-4 flex justify-center items-center">
-                <button className="font-bold  border-2  p-2 rounded-2xl text-md text-blue-600 hover:underline">
-                  View More
-                </button>
+              
+                <Button
+            onClick={() => Router.push('/blog')}
+            label="View More"
+            className="font-bold  border-2  p-2 rounded-2xl text-md text-orange-600 hover:bg-orange-500 hover:text-white transition duration-300 active:scale-90 "/>
               </div>
             </div>
           </div>

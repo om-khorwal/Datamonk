@@ -3,6 +3,7 @@ import React from "react";
 import Header from "../../components/header";
 import BlogCard from "../../components/blogcard";
 import Footer from "../../components/footer";
+import Button from "../../components/button";
 const blogData = [
   {
     title: "AI in Healthcare",
@@ -78,6 +79,15 @@ const blog = () => {
           <p className=" text-gray-600 md:text-xl text-xs">At Datamonk, we help businesses transform raw data into valuable insights, streamline cloud operations,
             and build scalable AI-powered solutions. With expertise in Data Lifecycle Management, Machine Learn
             ing, Cloud Optimization, and Kubernetes, we ensure your business stays ahead in the digital era.</p>
+        </div>
+        <div className=" h-[3rem]  flex justify-center items-center w-full mt-10 gap-20">
+          <Button className=" bg-orange-400 px-8 py-2 text-white font-black rounded-2xl" label="Filter" onClick={()=>{
+            console.log("filter");
+          }}/>
+          <div className="flex justify-center items-center gap-5 ">
+          <input className="bg-orange-200 px-2 py-1 rounded-2xl" placeholder="Search" type="search" name="" id="" />
+          <Button className="border-2 px-2 py-1" label="Search" onClick={()=>{ console.log("jj")}}/>
+          </div>
         </div>
         <div className="flex  mt-10 w-full justify-center items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 w-[75%]">

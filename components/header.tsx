@@ -30,12 +30,12 @@ const Header = () => {
 
       {/* Desktop Menu*/}
       <nav className='hidden xl:flex  gap-8 font-bold text-black items-center '>
-        <Link href="/home">Home</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/carrer">Carrer</Link>
-        <Link href="/about">About</Link>
+        <Link href="/home" className='hover:scale-110 duration-300 hover:text-orange-500'>Home</Link>
+        <Link href="/blog" className='hover:scale-110 duration-300 hover:text-orange-500'>Blog</Link>
+        <Link href="/carrer" className='hover:scale-110 duration-300 hover:text-orange-500'>Carrer</Link>
+        <Link href="/about" className='hover:scale-110 duration-300 hover:text-orange-500'>About</Link>
         <Link
-          className="bg-amber-600 text-white px-2 py-1 rounded-2xl hover:bg-orange-500 transition"
+          className="bg-amber-600 text-white px-2 py-1 rounded-2xl hover:bg-orange-500 transition hover:scale-110 duration-300"
           href="/contact"
           >
           Contact
@@ -60,7 +60,7 @@ const Header = () => {
         <Link onClick={toggleMenu} href="/blog">Blog</Link>
         <Link onClick={toggleMenu} href="/carrer">Carrer</Link>
         <Link onClick={toggleMenu} href="/about">About</Link>
-        <Link onClick={toggleMenu} href="/contact" className='bg-amber-600 text-white px-2 py-1 rounded-2xl hover:bg-orange-500 transition'>Contact</Link>
+        <Link onClick={toggleMenu} href="/contact" className='bg-amber-600 text-white  px-2 py-1 rounded-2xl hover:bg-orange-500 transition'>Contact</Link>
       </div>
     </header>
   );
