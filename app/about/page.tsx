@@ -16,7 +16,7 @@ const about = () => {
       </div>
       <main className="xl:p-10 p-5 flex flex-col justify-center items-center">
         <div className=" xl:flex w-full justify-center items-center   my-2   xl:my-5 ">
-          <div className=" xl:w-full  flex justify-center items-center  ">
+          <div className=" xl:w-full py-4 flex justify-center items-center  ">
             <img className="xl:w-2/3" src="https://i.postimg.cc/RVm2CcqT/Group-7.png" alt="img" />
           </div>
           <div className=" xl:w-full  flex justify-center items-center  ">
@@ -39,7 +39,10 @@ const about = () => {
           </div>
         </div>
       
-        <div className=" xl:flex w-full justify-center items-center   my-2   xl:my-5 ">
+        <div className=" xl:flex xl:flex-row-reverse w-full justify-center items-center   my-2   xl:my-5 ">
+          <div className=" xl:w-full  flex justify-center  items-center  ">
+            <img className="xl:w-2/3" src="https://i.postimg.cc/25qBqL3H/undraw-engineering-team-13ax-1.png" alt="img" />
+          </div>
           <div className=" xl:w-full  flex justify-center items-center  ">
             <div className=" xl:w-2/3 flex flex-col justify-center  items-start text-start">
 
@@ -47,9 +50,6 @@ const about = () => {
              
             </div>
 
-          </div>
-          <div className=" xl:w-full  flex justify-center items-center  ">
-            <img className="xl:w-2/3" src="https://i.postimg.cc/25qBqL3H/undraw-engineering-team-13ax-1.png" alt="img" />
           </div>
         </div>
       </main>
