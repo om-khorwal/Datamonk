@@ -24,12 +24,12 @@ const Header = () => {
           onClick={handleLogoClick}
           width={180}
           alt="logo"
-          className='cursor-pointer xl:w-1/12 md:w-1/12 w-2/6 flex justify-center items-center'
+          className='cursor-pointer xl:w-1/12 md:w-1/6 w-2/6 flex justify-center items-center'
         />
       
 
       {/* Desktop Menu*/}
-      <nav className='hidden xl:flex  gap-8 font-bold text-black items-center '>
+      <nav className='hidden sm:flex xl:flex  gap-8 font-bold text-black items-center '>
         <Link href="/home" className='hover:scale-110 duration-300 hover:text-orange-500'>Home</Link>
         <Link href="/blog" className='hover:scale-110 duration-300 hover:text-orange-500'>Blog</Link>
         <Link href="/carrer" className='hover:scale-110 duration-300 hover:text-orange-500'>Carrer</Link>

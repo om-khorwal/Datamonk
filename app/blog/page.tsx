@@ -80,7 +80,9 @@ const blog = () => {
             and build scalable AI-powered solutions. With expertise in Data Lifecycle Management, Machine Learn
             ing, Cloud Optimization, and Kubernetes, we ensure your business stays ahead in the digital era.</p>
         </div>
-        <div className=" h-[3rem]  flex justify-center items-center w-full mt-10 gap-20">
+        
+        {/*filter or search section*/}
+        <div className=" h-[3rem]  hidden justify-center items-center w-full mt-10 gap-20">
           <Button className=" bg-orange-400 px-8 py-2 text-white font-black rounded-2xl" label="Filter" onClick={()=>{
             console.log("filter");
           }}/>
@@ -89,8 +91,8 @@ const blog = () => {
           <Button className="border-2 px-2 py-1" label="Search" onClick={()=>{ console.log("jj")}}/>
           </div>
         </div>
-        <div className="flex  mt-10 w-full justify-center items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 w-[75%]">
+        <div className="flex  mt-10 w-full  justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 w-[75%] xl:w-[75%] md:w-[95%] mx-auto justify-items-center">
             {
               blogData.map((blog, index) => (
                 <BlogCard key={index} title={blog.title} description={blog.description} imageUrl={blog.imageUrl} />

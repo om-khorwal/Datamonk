@@ -180,7 +180,7 @@ const Homepage = () => {
           < div className='w-full lg:w-1/2 flex flex-col gap-4 justify-center items-start'>
             <h1 className='text-xl lg:text-2xl font-bold text-orange-500'>About Us</h1>
             <h1 className=' text-black font-bold  text-3xl lg:text-4xl'>A team of innovators, data enthusiasts, and problem-solvers.</h1>
-            <p className='text-base lg:text-lg text-gray-700'>We are a passionate group of data scientists, engineers, and strategists dedicated to transforming raw data into powerful insights.
+            <p className='text-base sm:text-xl lg:text-lg text-gray-700'>We are a passionate group of data scientists, engineers, and strategists dedicated to transforming raw data into powerful insights.
               At DataMonk, we believe in innovation, collaboration, and driving businesses toward success with AI-powered analytics.
               ‍Driven by Data. Inspired by Innovation. Focused on You.</p>
           </div>
@@ -225,12 +225,12 @@ const Homepage = () => {
       <section className='w-full h-fit flex flex-col items-center py-10 xl:py-5'>
         <div className='xl:flex  xl:w-full  h-2/4 justify-center items-center xl:p-20 bg-gray-100'>
           <div className='w-full flex justify-center items-center py-5 xl:py-2'>
-            <img className='max-w-xs' src="https://i.postimg.cc/7LFcrN44/group-of-four-people-discussing-project.png" alt="img" />
+            <img className='max-w-xs sm:max-w-lg xl:max-w-xs' src="https://i.postimg.cc/7LFcrN44/group-of-four-people-discussing-project.png" alt="img" />
           </div>
           <div className=' w-full my-10 xl:m-5 bg-white rounded-lg  py-5 px-5  xl:py-5 xl: justify-center items-center flex flex-col shadow-[0_3px_5px_rgb(0,0,0)]'>
-            <h1 className=' text-black font-bold  text-2xl'>Jobs we have done so far:</h1>
+            <h1 className=' text-black font-bold text-2xl sm:text-3xl xl:text-2xl'>Jobs we have done so far:</h1>
             <div className='flex justify-center items-center'>
-            <ul className='text-[1rem] list-disc list-inside ml-2  '>
+            <ul className='text-[1rem] sm:text-[1.25rem] xl:text-[1rem] list-disc list-inside ml-2  '>
               <li>MariaDB to Postgresql</li>
               <li>Metric Dashboard Designs</li>
               <li>EMR to EKS migration, Spark Job</li>

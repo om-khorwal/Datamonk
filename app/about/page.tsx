@@ -15,15 +15,15 @@ const about = () => {
           ing, Cloud Optimization, and Kubernetes, we ensure your business stays ahead in the digital era.</p>
       </div>
       <main className="xl:p-10 p-5 flex flex-col justify-center items-center">
-        <div className=" xl:flex w-full justify-center items-center   my-2   xl:my-5 ">
-          <div className=" xl:w-full py-4 flex justify-center items-center  ">
+        <div className=" xl:flex w-full justify-center items-center   py-2   xl:py-5 ">
+          <div className=" xl:w-full py-6 flex justify-center items-center  ">
             <img className="xl:w-2/3" src="https://i.postimg.cc/RVm2CcqT/Group-7.png" alt="img" />
           </div>
           <div className=" xl:w-full  flex justify-center items-center  ">
             <div className=" xl:w-2/3 flex flex-col justify-center  items-start text-start">
 
-              <h1 className="text-xl mb-5"><span className="text-orange-500 font-black ">Datamonk</span> is a team of passionate data scientists and engineers dedicated to unlocking the power of data for businesses of all sizes. </h1>
-              <h3 className="text-xl">Our comprehensive services include </h3>
+              <h1 className="text-xl xl:text-xl mb-5"><span className="text-orange-500 font-black ">Datamonk</span> is a team of passionate data scientists and engineers dedicated to unlocking the power of data for businesses of all sizes. </h1>
+              <h3 className="text-xl xl:text-xl">Our comprehensive services include </h3>
               <ul className="list-disc list-inside flex flex-col justify-start items-start w-full text-lg">
                 <li>Data analysis</li>
                 <li>Data visualization</li>
@@ -39,14 +39,14 @@ const about = () => {
           </div>
         </div>
       
-        <div className=" xl:flex xl:flex-row-reverse w-full justify-center items-center   my-2   xl:my-5 ">
-          <div className=" xl:w-full  flex justify-center  items-center  ">
+        <div className=" xl:flex xl:flex-row-reverse w-full justify-center items-center my-4 xl:my-5 ">
+          <div className=" xl:w-full  flex justify-center  items-center py-4  ">
             <img className="xl:w-2/3" src="https://i.postimg.cc/25qBqL3H/undraw-engineering-team-13ax-1.png" alt="img" />
           </div>
           <div className=" xl:w-full  flex justify-center items-center  ">
             <div className=" xl:w-2/3 flex flex-col justify-center  items-start text-start">
 
-              <h1 className="text-xl mb-5">Whether you're a small business aiming to make data-driven decisions or a large organization fostering a data-centric culture, Data Monk is here to assist. </h1>
+              <h1 className="text-lg mb-5">Whether you're a small business aiming to make data-driven decisions or a large organization fostering a data-centric culture, Data Monk is here to assist. </h1>
              
             </div>
 
