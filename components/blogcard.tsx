@@ -5,6 +5,7 @@ type BlogCardProps = {
   slug: string;
   imageUrl: string;
 };
+
 const BlogCard = ({ title, imageUrl, slug }: BlogCardProps) => {
 
   return (

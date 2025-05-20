@@ -73,8 +73,13 @@ const blogData = [
 
 
 const blog = () => {
+  type Blog = {
+  title: string;
+  slug: string;
+  imageUrl: string;
+};
 
-const [bdata, setbdata] = useState([]);
+const [bdata, setbdata] = useState<Blog[]>([]);
 const blogdata =()=>{
 
   axios.get("https://omkhorwal.pythonanywhere.com/blog/api/")
