@@ -77,7 +77,7 @@ const blog = () => {
 const [bdata, setbdata] = useState([]);
 const blogdata =()=>{
 
-  axios.get("http://127.0.0.1:8000/blog/api/")
+  axios.get("https://omkhorwal.pythonanywhere.com/blog/api/")
   .then((response) => {
     const data = response.data;
     setbdata(data);
