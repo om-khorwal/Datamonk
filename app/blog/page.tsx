@@ -4,6 +4,10 @@ import Header from "../../components/header";
 import BlogCard from "../../components/blogcard";
 import Footer from "../../components/footer";
 import Button from "../../components/button";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+
 const blogData = [
   {
     title: "AI in Healthcare",
@@ -69,6 +73,28 @@ const blogData = [
 
 
 const blog = () => {
+
+const [bdata, setbdata] = useState([]);
+const blogdata =()=>{
+
+  axios.get("http://127.0.0.1:8000/blog/api/")
+  .then((response) => {
+    const data = response.data;
+    setbdata(data);
+    console.log("Blog data fetched successfully:", data);
+  })
+  .catch((error) => {
+    console.error("Error fetching blog data:", error);
+    return [];
+  }
+)
+}
+useEffect(() => {
+  blogdata();
+}
+, []);
+
+
   return (
     <div className="">
       <Header />
@@ -94,10 +120,16 @@ const blog = () => {
         <div className="flex  mt-10 w-full  justify-center items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 w-[75%] xl:w-[75%] md:w-[95%] mx-auto justify-items-center">
             {
-              blogData.map((blog, index) => (
-                <BlogCard key={index} title={blog.title} description={blog.description} imageUrl={blog.imageUrl} />
-              ))
-            }
+  bdata.map((blog, index) => (
+    <BlogCard
+      key={index}
+      title={blog.title}
+      slug={blog.slug}
+      imageUrl={blog.imageUrl} // if this exists
+    />
+  ))
+}
+
           </div>
         </div>
         <div className="flex justify-center items-center mt-10 gap-5 ">
