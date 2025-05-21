@@ -196,7 +196,7 @@ const Homepage = () => {
                   bdata.map((blog: Blog, index) => (
                     <BlogCard
                     key={index}
-                    imageUrl={blog.img} // if this exists
+                    img={blog.img} // if this exists
                       title={blog.title}
                       slug={blog.slug}
                     />

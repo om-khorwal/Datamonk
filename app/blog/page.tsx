@@ -61,7 +61,7 @@ useEffect(() => {
         key={index}
         title={blog.title}
         slug={blog.slug}
-        imageUrl={blog.img} 
+        img={blog.img} 
       />
     ))
   }
