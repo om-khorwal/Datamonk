@@ -8,7 +8,7 @@ type BlogCardProps = {
 
 const BlogCard = ({ title, img, slug }: BlogCardProps) => {
   return (
-    <div className="w-full md:w-[90%] bg-white rounded-lg p-5 gap-2 flex flex-col drop-shadow-[0_1px_5px_rgba(0,0,0,1)] hover:shadow-2xl hover:duration-300 hover:bg-orange-400 hover:drop-shadow-[0_2px_15px_rgba(243,156,18,1)]">
+    <div className="w-full xl:w-64 md:w-[90%] bg-white rounded-lg p-5 gap-2 flex flex-col drop-shadow-[0_1px_5px_rgba(0,0,0,1)] hover:shadow-2xl hover:duration-300 hover:bg-orange-400 hover:drop-shadow-[0_2px_15px_rgba(243,156,18,1)]">
 
       {/* Image with fixed height and object-cover */}
       <div className="w-full h-[200px] flex justify-center items-center overflow-hidden rounded-lg">
