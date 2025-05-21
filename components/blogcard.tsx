@@ -1,10 +1,7 @@
 import React from "react";
+import { Blog } from "./blog";
 
-type BlogCardProps = {
-  title: string;
-  slug: string;
-  imageUrl: string;
-};
+type BlogCardProps = Blog;
 
 const BlogCard = ({ title, imageUrl, slug }: BlogCardProps) => {
 
