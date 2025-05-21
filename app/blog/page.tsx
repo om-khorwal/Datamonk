@@ -13,11 +13,11 @@ const blog = () => {
 const [bdata, setbdata] = useState<Blog[]>([]);
 const blogdata =()=>{
 
-  axios.get("https://datamonk-backend.onrender.com/blog/api/")
+  axios.get("http://127.0.0.1:8000/blog/api/")
   .then((response) => {
-    const bdata = response.data;
-    setbdata(bdata);
-    console.log("Blog data fetched successfully:", bdata);
+    const bldata = response.data;
+    setbdata(bldata);
+    console.log("Blog data fetched successfully:", bldata);
   })
   .catch((error) => {
     console.error("Error fetching blog data:", error);
@@ -61,7 +61,7 @@ useEffect(() => {
         key={index}
         title={blog.title}
         slug={blog.slug}
-        imageUrl={blog.imageUrl} // if this exists
+        imageUrl={blog.img} 
       />
     ))
   }
