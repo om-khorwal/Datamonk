@@ -55,7 +55,7 @@ const Homepage = () => {
   const [bdata, setbdata] = useState<Blog[]>([]);
   const blogdata = () => {
 
-    axios.get("http://127.0.0.1:8000/blog/api/")
+    axios.get("https://datamonk-backend.onrender.com/blog/api/")
       .then((response) => {
         const bdata = response.data;
         setbdata(bdata);
@@ -185,13 +185,13 @@ const Homepage = () => {
 
         <hr className='w-full max-w-6xl border-gray-300' />
 
-        <div className='w-full xl:h-1/2 xl:flex xl:justify-start xl:items-center py-10 xl:py-5'>
-          <div className='xl:w-1/4 flex justify-center items-center'>
-            <h1 className='font-bold  text-3xl'>BLogs</h1>
+        <div className='w-full xl:h-1/2 xl:flex xl:justify-start xl:items-center py-10 xl:py-5 bg-red-600'>
+          <div className='xl:w-1/4 flex justify-center items-center bg-blue-400'>
+            <h1 className='font-bold  text-3xl bg-green-600 '>BLogs</h1>
           </div>
-          <div className="xl:w-9/12 w-full overflow-x-auto flex ">
-            <div className="flex w-full gap-6 px-2 py-2">
-              <div className="flex gap-8 overflow-x-auto xl:w-full w-fit p-4 ">
+          <div className="xl:w-full w-full p-10  flex bg-yellow-400 ">
+            <div className="flex w-full gap-6 bg-gray-500">
+              <div className="flex gap-8 overflow-auto xl:w-full w-fit p-4 bg-violet-800  ">
                 {
                   bdata.map((blog: Blog, index) => (
                     <BlogCard
@@ -202,15 +202,18 @@ const Homepage = () => {
                     />
                   ))
                 }
-              </div>
-              <div className="min-w-[240px]  rounded-md p-4 flex justify-center items-center">
+                 <div className="w-fit rounded-md p-4 flex justify-center items-center">
 
                 <Button
                   onClick={() => Router.push('/blog')}
                   label="View More"
                   className="font-bold  border-2  p-2 rounded-2xl text-md text-orange-600 hover:bg-orange-500 hover:text-white transition duration-300 active:scale-90 " />
+              </div>     
+                
               </div>
+
             </div>
+                    
           </div>
 
         </div>

@@ -13,7 +13,7 @@ const blog = () => {
 const [bdata, setbdata] = useState<Blog[]>([]);
 const blogdata =()=>{
 
-  axios.get("http://127.0.0.1:8000/blog/api/")
+  axios.get("https://datamonk-backend.onrender.com/blog/api/")
   .then((response) => {
     const bldata = response.data;
     setbdata(bldata);

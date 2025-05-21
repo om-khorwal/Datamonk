@@ -4,20 +4,22 @@ import { Blog } from "./blog";
 type BlogCardProps = Blog;
 
 const BlogCard = ({ title, imageUrl, slug }: BlogCardProps) => {
-
   return (
-    <>
-      <div className=" w-full md:w-[90%] md:max-h-full bg-white rounded-lg p-5 gap-2 flex flex-col drop-shadow-[0_1px_5px_rgba(0,0,0,1)] hover:shadow-2xl hover:duration-300 not-hover:duration-300 hover:bg-orange-400 hover:drop-shadow-[0_2px_15px_rgba(243,156,18,1)]">
-        <div className="w-full h-fit justify-center items-center flex">
-          <img className="rounded-lg" src={imageUrl} alt="img" />
-        </div>
-        <h3 className="font-bold text-lg md:text-xl">{title}</h3>
-        <p className="text-gray-600 text-[15px]">{slug}</p>
-
-
+    <div className="w-full md:w-[90%] bg-white rounded-lg p-5 gap-2 flex flex-col drop-shadow-[0_1px_5px_rgba(0,0,0,1)] hover:shadow-2xl hover:duration-300 hover:bg-orange-400 hover:drop-shadow-[0_2px_15px_rgba(243,156,18,1)]">
+      
+      {/* Image with fixed height and object-cover */}
+      <div className="w-full h-[200px] flex justify-center items-center overflow-hidden rounded-lg">
+        <img
+          className="w-full h-full object-cover"
+          src={imageUrl}
+          alt={title}
+        />
       </div>
-    </>
-  )
-}
+
+      <h3 className="font-bold text-lg md:text-xl mt-2">{title}</h3>
+      <p className="text-gray-600 text-[15px]">{slug}</p>
+    </div>
+  );
+};
 
 export default BlogCard;
