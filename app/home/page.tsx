@@ -189,15 +189,15 @@ const Homepage = () => {
           <div className='xl:w-[20%] flex justify-center items-center '>
             <h1 className='font-bold  text-3xl '>BLogs</h1>
           </div>
-          <div className="xl:w-[80%] w-full p-4 sm:p-6 md:p-8 xl:p-10 ">
+          <div className="xl:w-[80%] w-full p-4 sm:p-6 md:p-8 xl:p-10 flex items-center justify-center">
             <div className="w-full ">
               {/* Horizontally scrollable container */}
-              <div className="flex gap-4 overflow-x-auto w-full p-4  scrollbar-hide">
+              <div className="flex gap-10 overflow-x-auto w-full p-4  scrollbar-hide">
                 {
-                  bdata.map((blog: Blog, index) => (
+                  bdata.slice(0,5).map((blog: Blog, index) => (
                     <div
                       key={index}
-                      className="flex-shrink-0 w-[75vw] sm:w-[60vw] md:w-[45vw] lg:w-[35vw] xl:w-64"
+                      className=" flex-shrink-0 w-[75vw] sm:w-[60vw] md:w-[45vw] lg:w-[35vw] xl:w-64"
                     >
                       <BlogCard
                         title={blog.title}
