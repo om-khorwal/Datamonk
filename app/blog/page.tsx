@@ -82,7 +82,7 @@ const blog = () => {
 const [bdata, setbdata] = useState<Blog[]>([]);
 const blogdata =()=>{
 
-  axios.get("https://omkhorwal.pythonanywhere.com/blog/api/")
+  axios.get("https://datamonk-backend.onrender.com/blog/api/")
   .then((response) => {
     const data = response.data;
     setbdata(data);
