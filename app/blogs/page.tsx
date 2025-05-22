@@ -9,10 +9,11 @@ import { useEffect, useState } from "react";
 import { Blog } from "../../components/blog";
 
 
-const blogs = () => {
+const blog = () => {
 const [bdata, setbdata] = useState<Blog[]>([]);
 const [currentPage, setCurrentPage] = useState(1);
-const blogsPerPage = 2;
+const [loading, setLoading] = useState(true);
+const blogsPerPage = 1;
 
 const indexOfLastBlog = currentPage * blogsPerPage;
 const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
@@ -24,43 +25,53 @@ const blogdata =()=>{
   axios.get("https://datamonk-backend.onrender.com/blog/api/")
   .then((response) => {
     let bldata = response.data;
-
     bldata = bldata.sort((a: Blog, b: Blog) => new Date(b.created_at).getTime())
-    
     setbdata(bldata);
+    setLoading(false);
     console.log("Blog data fetched successfully:", bldata);
   })
   .catch((error) => {
     console.error("Error fetching blog data:", error);
-    return [];
+    setLoading(false);
   });
 };
 
 const paginationRange = () => {
-  const delta = 2; // how many pages to show before/after current
-  const range = [];
-  const left = Math.max(2, currentPage - delta);
-  const right = Math.min(totalPages - 1, currentPage + delta);
+  const pages : (number | string)[] = [];
+  
+  pages.push(1);
 
-  range.push(1); // always show first page
+  if (currentPage <= 3) {
+    for (let i = 2; i <= Math.min(3, totalPages); i++) {
+      pages.push(i);
+    }
 
-  if (left > 2) {
-    range.push("...");
+    if (totalPages > 4) {
+      pages.push("...");
+      pages.push(totalPages);
+    } else if (totalPages === 4) {
+      pages.push(4);
+    }
   }
 
-  for (let i = left; i <= right; i++) {
-    range.push(i);
+  else if (currentPage >= totalPages - 2) {
+    pages.push("...");
+
+    for (let i = totalPages - 2; i <= totalPages; i++) {
+      if (i > 1 && !pages.includes(i)){
+        pages.push(i);
+      }
+    }
   }
 
-  if (right < totalPages - 1) {
-    range.push("...");
+  else {
+    pages.push("...");
+    pages.push(currentPage);
+    pages.push("...");
+    pages.push(totalPages);
   }
 
-  if (totalPages > 1) {
-    range.push(totalPages); // always show last page if more than 1 page
-  }
-
-  return range;
+  return pages;
 };
 
 
@@ -96,67 +107,71 @@ useEffect(() => {
           <Button className="border-2 px-2 py-1" label="Search" onClick={()=>{ console.log("jj")}}/>
           </div>
         </div>
-        <div className="flex  mt-10 w-full  justify-center items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 w-[75%] xl:w-[75%] md:w-[95%] mx-auto justify-items-center">
-              {
-               currentBlogs.map((blog:Blog, index) => (
-                 <BlogCard
-                   key={index}
-                   title={blog.title}
-                   slug={blog.slug}
-                   img={blog.img}
-                   id={blog.id}
-                 />
-               ))
-             }
-
+        {loading ? (
+          <div className="flex justify-center items-center mt-20">
+            <p className="text-xl font-semibold text-gray-500">Loading blogs...</p>
           </div>
-        </div>
-        <div className="flex justify-center items-center mt-10 gap-2 flex-wrap">
+        ) : (
+          <>
+            {/*Blog cards*/}
+            <div className="flex mt-10 w-full justify-center items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-5 w-[75%] xl:w-[75%] md:w-[95%] mx-auto justify-items-center">
+                {currentBlogs.map((blog: Blog, index) => (
+                  <BlogCard
+                    key={index}
+                    title={blog.title}
+                    slug={blog.slug}
+                    img={blog.img}
+                    id={blog.id}
+                  />
+                ))}
+              </div>
+            </div>
 
-          {/* Previous Button */}
-          <button
-            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-            disabled={currentPage === 1}
-            className="px-3 py-1 rounded border disabled:opacity-50"
-          >
-            Prev
-          </button>
-
-          {/* Page Buttons with Ellipsis */}
-          {paginationRange().map((item, index) => {
-            if (item === "...") {
-              return <span key={index} className="px-2">...</span>;
-            }
-          
-            return (
+            {/*Pagination*/}
+            <div className="flex justify-center items-center mt-10 gap-2 flex-wrap">
               <button
-                key={index}
-                onClick={() => setCurrentPage(Number(item))}
-                className={`px-3 py-1 rounded border ${
-                  currentPage === item
-                    ? "bg-orange-400 text-white"
-                    : "text-gray-400 bg-white"
-                }`}
+                onClick={()=> setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+                className="px-3 py-1 rounded border disabled:opacity-50"
               >
-                {item}
+                Prev
               </button>
-            );
+
+              {paginationRange().map((item, index)=> {
+                if (item === "...") {
+                  return <span key={index} className="px-2">...</span>;
+                }
+
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentPage(Number(item))}
+                    className={`px-3 py-1 rounded border ${
+                      currentPage === item 
+                      ? "bg-orange-400 text-white" 
+                      : "text-gray-400 bg-white"
+                    }`}
+                  >
+                    {item}
+                  </button>
+                );
               })}
 
-              {/* Next Button */}
               <button
-                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                onClick={()=> setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
                 disabled={currentPage === totalPages}
                 className="px-3 py-1 rounded border disabled:opacity-50"
               >
                 Next
               </button>
-         </div>
+            </div>
+          </>
+        )}
 
       </main>
       <Footer/>
     </div>
   );
 };
-export default blogs;
+export default blog;

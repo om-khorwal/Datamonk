@@ -212,7 +212,7 @@ const Homepage = () => {
                 {/* View More Button at the end */}
                 <div className="flex-shrink-0 w-fit flex justify-center items-center">
                   <Button
-                    onClick={() => Router.push('/blog')}
+                    onClick={() => Router.push('/blogs')}
                     label="View More"
                     className="font-bold border-2 p-2 rounded-2xl text-md text-orange-600 hover:bg-orange-500 hover:text-white transition duration-300 active:scale-90"
                   />
