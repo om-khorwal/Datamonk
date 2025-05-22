@@ -6,14 +6,9 @@ import { Blog } from "../../../components/blog";
 
 type blog = Blog;
 
-type Props = {
-  params: { id: string };
-};
-
 async function getBlogById(id: string): Promise<blog | null> {
   try {
     const res = await axios.get(`http://127.0.0.1:8000/blog/api/${id}`);
-    console.log("Blog data fetched successfully:", res.data);
     return res.data;
   } catch (err) {
     console.error("Failed to fetch blog by ID:", err);
@@ -21,7 +16,12 @@ async function getBlogById(id: string): Promise<blog | null> {
   }
 }
 
-export default async function BlogDetailPage({ params }: Props) {
+// Note how we type `params` inline here without extra wrapping
+export default async function BlogDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const blog = await getBlogById(params.id);
 
   if (!blog) {
@@ -35,13 +35,21 @@ export default async function BlogDetailPage({ params }: Props) {
         <header className="mb-6">
           <h1 className="text-5xl font-extrabold mb-2">{blog.title}</h1>
           <div className="flex flex-wrap items-center gap-4 text-gray-500 text-sm">
-            <span>By <strong>{blog.author}</strong></span>
+            <span>
+              By <strong>{blog.author}</strong>
+            </span>
             <span>•</span>
-            <time dateTime={blog.created_at}>{new Date(blog.created_at).toLocaleDateString()}</time>
+            <time dateTime={blog.created_at}>
+              {new Date(blog.created_at).toLocaleDateString()}
+            </time>
             <span>•</span>
-            <time dateTime={blog.updated_at} className="italic">(Updated {new Date(blog.updated_at).toLocaleDateString()})</time>
+            <time dateTime={blog.updated_at} className="italic">
+              (Updated {new Date(blog.updated_at).toLocaleDateString()})
+            </time>
             <span>•</span>
-            <span className="bg-blue-100 text-blue-700 rounded-full px-3 py-1 font-semibold">{blog.tags}</span>
+            <span className="bg-blue-100 text-blue-700 rounded-full px-3 py-1 font-semibold">
+              {blog.tags}
+            </span>
           </div>
         </header>
 
@@ -56,7 +64,12 @@ export default async function BlogDetailPage({ params }: Props) {
         </article>
 
         {blog.share_link && (
-          <a href={blog.share_link} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+          <a
+            href={blog.share_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
             Share this post
           </a>
         )}
