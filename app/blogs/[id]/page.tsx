@@ -9,7 +9,7 @@ type blog = Blog;
 
 async function getBlogById(id: string): Promise<blog | null> {
   try {
-    const res = await axios.get(`https://datamonk-backend.onrender.com/blog/api/${id}`);
+    const res = await axios.get(`http://127.0.0.1:8000/blog/api/${id}`);
     console.log("Blog data fetched successfully:", res.data);
     return res.data;
 

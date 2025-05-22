@@ -59,7 +59,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="Your Message"
-              className="w-full p-2 mb-4 rounded-md border-b-2 h-30"
+              className="w-full p-2 mb-4 rounded-md border-b-2 h-30 line-clamp-6"
             />
             <button
               onClick={handleSubmit}

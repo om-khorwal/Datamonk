@@ -22,7 +22,7 @@ const currentBlogs = bdata.slice(indexOfFirstBlog, indexOfLastBlog);
 const totalPages = Math.ceil(bdata.length / blogsPerPage);
 
 const blogdata =()=>{
-  axios.get("https://datamonk-backend.onrender.com/blog/api/")
+  axios.get("https://datamonk-backend.onrender.com/blog/api/${id}")
   .then((response) => {
     let bldata = response.data;
     bldata = bldata.sort((a: Blog, b: Blog) => new Date(b.created_at).getTime())
