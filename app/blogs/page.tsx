@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { Blog } from "../../components/blog";
 
 
-const blog = () => {
+const blogs = () => {
 const [bdata, setbdata] = useState<Blog[]>([]);
 const [currentPage, setCurrentPage] = useState(1);
 const blogsPerPage = 2;
@@ -104,7 +104,8 @@ useEffect(() => {
                    key={index}
                    title={blog.title}
                    slug={blog.slug}
-                   img={blog.img} 
+                   img={blog.img}
+                   id={blog.id}
                  />
                ))
              }
@@ -158,4 +159,4 @@ useEffect(() => {
     </div>
   );
 };
-export default blog;
+export default blogs;

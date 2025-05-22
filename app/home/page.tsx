@@ -194,7 +194,7 @@ const Homepage = () => {
               {/* Horizontally scrollable container */}
               <div className="flex gap-10 overflow-x-auto w-full p-4  scrollbar-hide">
                 {
-                  bdata.slice(0,5).map((blog: Blog, index) => (
+                  bdata.slice(0,5 ).map((blog: Blog, index) => (
                     <div
                       key={index}
                       className=" flex-shrink-0 w-[75vw] sm:w-[60vw] md:w-[45vw] lg:w-[35vw] xl:w-64"
@@ -203,6 +203,7 @@ const Homepage = () => {
                         title={blog.title}
                         slug={blog.slug}
                         img={blog.img}
+                        id={blog.id}
                       />
                     </div>
                   ))

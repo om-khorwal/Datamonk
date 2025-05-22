@@ -8,7 +8,7 @@ export interface Blog {
   author: string;
   tags: string;
   share_link: string | null;
-  img: string | null; // <-- Add this line
+  img: string ;
 }
 
 
