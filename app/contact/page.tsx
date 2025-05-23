@@ -12,7 +12,7 @@ const Contact = () => {
   };
 
   const handleSubmit = async () => {
-    const res = await fetch("/api/sendEmail", {
+    const res = await fetch("/api/sendemail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -21,6 +21,7 @@ const Contact = () => {
     if (res.ok) {
       setStatus("Message sent!");
       setForm({ name: "", email: "", message: "" });
+      console.log(form)
     } else {
       setStatus("Failed to send.");
     }
@@ -53,17 +54,17 @@ const Contact = () => {
               placeholder="Your Email"
               className="block w-full p-2 mb-4 rounded-md border-b-2"
             />
-            <input
-              type="text"
+            <textarea
               name="message"
               value={form.message}
-              onChange={handleChange}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
               placeholder="Your Message"
-              className="w-full p-2 mb-4 rounded-md border-b-2 h-30 line-clamp-6"
+              className="w-full p-2 mb-4 rounded-md border-b-2 h-32 resize-none"
             />
+
             <button
               onClick={handleSubmit}
-              className="rounded-2xl text-white w-1/2 xl:py-2 xl:px-10 xl:my-14 bg-orange-500"
+              className="rounded-2xl text-white w-1/2 xl:py-2 xl:px-10 xl:my-14 bg-orange-500 active:scale-125"
             >
               Send
             </button>
