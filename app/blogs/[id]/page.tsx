@@ -89,7 +89,7 @@ import { Blog } from "../../../components/blog"; // Make sure this interface is 
 // Function to fetch blog by ID from API
 async function getBlogById(id: string): Promise<Blog | null> {
   try {
-    const res = await axios.get(`http://127.0.0.1:8000/blog/api/${id}`);
+    const res = await axios.get(`https://datamonk-backend.onrender.com/blog/api/${id}`);
     return res.data;
   } catch (err) {
     console.error("Failed to fetch blog by ID:", err);
