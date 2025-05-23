@@ -78,54 +78,32 @@
 //     </div>
 //   );
 // }
-"use client";
 
-import React, { useEffect, useState } from "react";
+
+// app/blogs/[id]/page.tsx
 import axios from "axios";
+import Header from "../../../components/header";
+import Footer from "../../../components/footer";
+import { Blog } from "../../../components/blog";
 
-type Blog = {
-  id: number;
-  title: string;
-  slug: string;
-  content: string;
-  created_at: string;
-  updated_at: string;
-  author: string;
-  tags: string;
-  share_link: string | null;
-  img: string;
-};
-
-interface Props {
-  id: string;
+async function getBlogById(id: string): Promise<Blog | null> {
+  try {
+    const res = await axios.get(`http://127.0.0.1:8000/blog/api/${id}`);
+    return res.data;
+  } catch (err) {
+    console.error("Failed to fetch blog by ID:", err);
+    return null;
+  }
 }
 
-const BlogDetailPage: React.FC<Props> = ({ id }) => {
-  const [blog, setBlog] = useState<Blog | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+export default async function BlogDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const blog = await getBlogById(params.id);
 
-  useEffect(() => {
-    async function fetchBlog() {
-      try {
-        setLoading(true);
-        const res = await axios.get(`http://127.0.0.1:8000/blog/api/${id}`);
-        setBlog(res.data);
-        setError(null);
-      } catch (err) {
-        setError("Failed to fetch blog");
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchBlog();
-  }, [id]);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
   if (!blog) return <div>Blog not found.</div>;
-
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md">
       <header className="mb-6">
@@ -173,4 +151,3 @@ const BlogDetailPage: React.FC<Props> = ({ id }) => {
   );
 };
 
-export default BlogDetailPage;
