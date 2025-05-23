@@ -81,26 +81,17 @@
 
 
 // app/blogs/[id]/page.tsx
+// app/blogs/[id]/page.tsx
+
+import React from "react";
 import axios from "axios";
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
+import { Blog } from "../../../components/blog";
 
-// Inline the Blog type here or import it if you have it exported
-type Blog = {
-  id: number;
-  title: string;
-  slug: string;
-  content: string;
-  created_at: string;
-  updated_at: string;
-  author: string;
-  tags: string;
-  share_link: string | null;
-  img: string;
-};
+type blog = Blog;
 
-// Fetch blog by ID
-async function getBlogById(id: string): Promise<Blog | null> {
+async function getBlogById(id: string): Promise<blog | null> {
   try {
     const res = await axios.get(`https://datamonk-backend.onrender.com/blog/api/${id}`);
     return res.data;
@@ -110,15 +101,17 @@ async function getBlogById(id: string): Promise<Blog | null> {
   }
 }
 
-// ✅ Don't try to add custom PageProps types — just let Next.js handle it
-const BlogDetailPage = async ({
+// Properly type the params object
+export default async function BlogDetailPage({
   params,
 }: {
   params: { id: string };
-}) => {
+}) {
   const blog = await getBlogById(params.id);
 
-  if (!blog) return <div>Blog not found.</div>;
+  if (!blog) {
+    return <div>Blog not found.</div>;
+  }
 
   return (
     <div>
@@ -169,6 +162,4 @@ const BlogDetailPage = async ({
       <Footer />
     </div>
   );
-};
-
-export default BlogDetailPage;
+}
