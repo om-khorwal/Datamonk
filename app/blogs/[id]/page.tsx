@@ -5,9 +5,9 @@ import Footer from "../../../components/footer";
 import { Blog } from "../../../components/blog";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 async function getBlogById(id: string): Promise<Blog | null> {
@@ -21,7 +21,9 @@ async function getBlogById(id: string): Promise<Blog | null> {
 }
 
 export default async function BlogDetailPage({ params }: PageProps) {
-  const blog = await getBlogById(params.id);
+  // Await the params since it's now a Promise in Next.js 15
+  const resolvedParams = await params;
+  const blog = await getBlogById(resolvedParams.id);
 
   if (!blog) {
     return <div>Blog not found.</div>;
