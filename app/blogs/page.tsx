@@ -88,7 +88,7 @@ useEffect(() => {
   return (
     <div className="">
       <Header />
-      <main className="md:p-10 p-5">
+      <main className="md:p-10 p-5 wfull ">
         <div className="gap-1 flex flex-col">
           <h1 className="font-bold text-4xl md:text-5xl">Blogs</h1>
           <h3 className="font-medium text-xl md:text-3xl mb-3 ">Empowering Businesses with Data & AI</h3>

@@ -26,7 +26,7 @@ const BlogCard = ({ title, img, slug,id }: BlogCardProps) => {
       <p className="text-gray-600 text-[15px] line-clamp-2 ">{slug}</p>
       <div className="xl:w-full flex justify-center items-center mt-2">
         <Button
-          className="bg-white w-1/2 px-2 py-2 rounded-lg  text-black hover:font-bold duration-300"
+          className="bg-white w-1/2 px-2 py-2 rounded-lg  text-black hover:font-bold duration-300 active:scale-90"
           label="Read More"
           onClick={() =>     router.push(`/blogs/${id}`)}
         />

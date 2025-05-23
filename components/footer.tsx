@@ -23,7 +23,7 @@ const footer = () => {
             <div className='w-full xl:w-1/2 flex flex-col items xl:items-end gap-6 p-4 '>
               <div className='xl:flex     text-center w-full font-bold xl:justify-end text-[1rem] xl:gap-10 xl:text-[1.2rem] '>
                 <Link className="border-b-2 xl:mx-0 mx-2" href="/home">Home</Link>
-                <Link className="border-b-2 xl:mx-0 mx-2" href="/blog">Blog</Link>
+                <Link className="border-b-2 xl:mx-0 mx-2" href="/blogs">Blogs</Link>
                 <Link className="border-b-2 xl:mx-0 mx-2" href="/carrer">Carrer</Link>
                 <Link className="border-b-2 xl:mx-0 mx-2" href="/about">About</Link>
                 <Link className="border-b-2 xl:mx-0 mx-2" href="/contact">Contact</Link>
