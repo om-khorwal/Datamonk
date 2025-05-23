@@ -84,9 +84,22 @@
 import axios from "axios";
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
-import { Blog } from "../../../components/blog"; // Make sure this interface is correct and exported
 
-// Function to fetch blog by ID from API
+// Inline the Blog type here or import it if you have it exported
+type Blog = {
+  id: number;
+  title: string;
+  slug: string;
+  content: string;
+  created_at: string;
+  updated_at: string;
+  author: string;
+  tags: string;
+  share_link: string | null;
+  img: string;
+};
+
+// Fetch blog by ID
 async function getBlogById(id: string): Promise<Blog | null> {
   try {
     const res = await axios.get(`https://datamonk-backend.onrender.com/blog/api/${id}`);
@@ -97,17 +110,15 @@ async function getBlogById(id: string): Promise<Blog | null> {
   }
 }
 
-// Server component that receives URL params
-export default async function BlogDetailPage({
+// ✅ Don't try to add custom PageProps types — just let Next.js handle it
+const BlogDetailPage = async ({
   params,
 }: {
   params: { id: string };
-}) {
+}) => {
   const blog = await getBlogById(params.id);
 
-  if (!blog) {
-    return <div>Blog not found.</div>;
-  }
+  if (!blog) return <div>Blog not found.</div>;
 
   return (
     <div>
@@ -158,4 +169,6 @@ export default async function BlogDetailPage({
       <Footer />
     </div>
   );
-}
+};
+
+export default BlogDetailPage;
